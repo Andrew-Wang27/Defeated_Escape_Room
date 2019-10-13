@@ -35,6 +35,7 @@ public class JavaApplication54 {
         //open room 1
         room1.OpeningScenario();
     }
-    }
     
-}
+ }
+    
+
