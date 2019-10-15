@@ -30,10 +30,18 @@ public class Desk {
 
     void PhoneORLamp(String u)
     if u.equalsIgnoreCase(room1.keyWords[location of PHONE]
-        print: 
+         print: you feel there are keys missing but cannot see which ones. What do you want to do
+         get userinput 
+         PhoneORLamp(userInput) 
+       
         
     else if u.equalsIgnoreCase(room1.keyWords[location of LAMP]
-        print: 
+        print: you turn the lamp on and see a bookshelf across the room with only 5 books
+        and a large painting above the couch with a small quote. On the desk you see 
+        a keypad next to the locked drawer! 
+        The keypad will allow a password of 5 characters. 
+    
+        Phone class print statement
 
     else if u.equalsIgnoreCase(room1.keyWords[location of TIMER]
         call timer class to display time to user
