@@ -29,5 +29,6 @@ public class Painting {
     else 
         ERROR statement 
         call printstatement of bookshelf
+    testing
     */
 }
