@@ -16,7 +16,7 @@ import java.util.Scanner;
 //contains room1 functions and calls other files
 //files include "objects" scattered around the room that the user can interact with
 public class Room1 {
-    public static final String keyWords[] = {"move", "wait", "right", "left", "throw", "smell", "forward", "timer"};
+    public static final String keyWords[] = {"move", "wait", "right", "left", "throw", "smell", "forward", "timer", "phone", "lamp", "code", "bookshelf", "painting"};
     static UserInterface ui = new UserInterface();
     Scanner keyboard = new Scanner(System.in); 
     Room1(){}
