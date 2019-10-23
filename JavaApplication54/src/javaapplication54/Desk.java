@@ -11,25 +11,62 @@ package javaapplication54;
  * @author Gab
  */
 public class Desk {
-    // String userInput; 
-    //UserInterface ui = new UserInterface(); 
-    //Room1 room1 = new Room1(); 
+   String userInput; 
+    UserInterface ui = new UserInterface(); 
+    Room1 room1 = new Room1(); 
+    //Phone phone = new Phone(); 
     
-    /*void printStatement ---takes no arguments
-    outputs the following: "With your hands out in front of you, you find a desk.\n
-    The desk has multiple wires leading to a phone and a lamp. You also pull on a 
-    mysterious, locked drawer. What would you like to try first?"
-
+    void printStatement()
+    {
+        ui.printGameOutput("\nWith your hands out in front of you, you find a desk.\n"
+    + "The desk has multiple wires leading to a phone and a lamp.\n"
+                +"You also pull on a mysterious, locked drawer.\n"+
+                "What would you like to try first?\n"); 
+        userInput = ui.getGameInput(); 
+        PhoneORLamp(userInput); 
+    }
+    
+/*
     -Options we are looking for: phone OR lamp 
     -Make sure to add the PHONE and LAMP keyword to the keyword array in the Room1 file
     
     -userInput = ui.getUserInput()
     - PhoneORLamp(userInput)
-    -end of print statement function
+    -end of print statement function*/
 
 
     void PhoneORLamp(String u)
-    if u.equalsIgnoreCase(room1.keyWords[location of PHONE]
+    {
+        if(u.equalsIgnoreCase(room1.keyWords[8]))
+        {
+            ui.printGameOutput("\nYou touch the keypad and realize there are keys missing\n"
+                    + "on the keypad. You cannot see which ones are missing as the room is still dark.\n"
+                    + "What do you want to do?\n"); 
+            userInput = ui.getGameInput(); 
+            PhoneORLamp(userInput); 
+        }
+        else if(u.equalsIgnoreCase(room1.keyWords[9]))
+        {
+            ui.printGameOutput("\nYou turn the lamp on and see a bookshelf across the room\n"
+                    + "with only 5 books littering the shelves and a large painting above\n"
+                    + "the couch on the other side of the room. The painting has a small\n"
+                    + "quote on it. On the desk you see a keypad next to the locked drawer.\n"
+                    + "It looks like it will allow a 5 letter/number password.\n");
+            //phone.printStatement(); 
+        }
+        /*else if u.equalsIgnoreCase(room1.keyWords[location of TIMER]
+        call timer class to display time to user
+        call print Scenario (in this desk class) to get user input for this scenario*/
+        else
+        {
+            ui.printGameOutput("Sorry, we do not recognize that word\n\n"); 
+            printStatement(); 
+        }
+    }
+    
+    //all pseudo code below has been implemented******************************************
+    
+   /* if u.equalsIgnoreCase(room1.keyWords[location of PHONE]
          print: you feel there are keys missing but cannot see which ones. What do you want to do
          get userinput 
          PhoneORLamp(userInput) 
@@ -54,6 +91,8 @@ public class Desk {
             printStatement(); 
     
     */
+    
+  
     
 }
 
