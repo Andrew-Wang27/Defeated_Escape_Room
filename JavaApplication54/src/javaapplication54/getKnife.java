@@ -14,6 +14,7 @@ public class getKnife {
     static Room1 room1 = new Room1();
     static Couch couch = new Couch();
     //create desk object here
+    static Desk desk = new Desk();
     static UserInterface ui = new UserInterface();
     String userInput; 
     Scanner keyboard = new Scanner(System.in);
@@ -39,7 +40,7 @@ public class getKnife {
                     + "With your hands out in front of you, you find a desk with\n"
                     + "wires leading to a lamp and a phone. You also find a locked drawer.\n");
                     
-           // desk.printStatement(); 
+           desk.printStatement(); 
         }
          //if right
         else if(u.equalsIgnoreCase((room1.keyWords[2])))
