@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.text.DefaultCaret;
 /**
  *
  * @author Gab
@@ -53,6 +54,8 @@ public class UserInterface extends JFrame{
     }
     static void printGameOutput(String printString) {
         gameText.append(printString);
+        //the following text was added to automatically focus on the most recent line added on the frame - Gab
+        gameText.setCaretPosition(gameText.getDocument().getLength());
     }
     static void printConsole(String printString) {
         System.out.print(printString);
