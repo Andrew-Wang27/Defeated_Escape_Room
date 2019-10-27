@@ -10,7 +10,64 @@ package javaapplication54;
  * @author Gab
  */
 public class CracktheCode {
-     //add class objects here to access their methods
+UserInterface ui = new UserInterface(); 
+    Rug rug = new Rug();
+    String userInput = " "; 
+    
+    void code()
+    {
+        ui.printGameOutput("\nEnter the code: \n");
+        userInput = ui.getGameInput(); 
+        if(userInput == null)
+        {
+            System.exit(0);
+        }
+        else if(keys.WAIKA.name().equalsIgnoreCase(userInput))
+        {
+            ui.printGameOutput("Congrats! You got the code right!\n"
+                    + "The drawer slides open and reveals the contents inside./\n"
+                    + "A medical kit and key are inside."); 
+            rug.printStatement(); 
+        }
+        else 
+        {
+            ui.printGameOutput("\nWrong code! What would you like to do now?\n"); 
+            userInput = ui.getGameInput(); 
+            CodeBookshelfPainting(userInput); 
+        }
+        
+        
+    }
+    
+    void CodeBookshelfPainting(String u)
+    {
+        if(u == null)
+        {
+            System.exit(0);
+        }
+       else if(keys.CODE.name().equalsIgnoreCase(u))
+       {
+           code(); 
+       }
+       else if(keys.BOOKSHELF.name().equalsIgnoreCase(u))
+       {
+           Bookshelf bookshelf = new Bookshelf();
+           bookshelf.printStatement();
+       }
+       else if(keys.PAINTING.name().equalsIgnoreCase(u))
+       {
+            ui.printGameOutput("\nYou walk over to the painting above the couch.\n");
+            Painting painting = new Painting(); 
+            painting.printStatement(); 
+        }
+        else
+        {
+            ui.printGameOutput("Sorry, we do not recognize that word\nWhat would you like to do?"); 
+            userInput = ui.getGameInput(); 
+            CodeBookshelfPainting(userInput); 
+        }
+       
+    }
     
     /*
     void code
@@ -46,10 +103,8 @@ public class CracktheCode {
             call print statemnt of this class again
     }
     
-    void Explore
-    print: exploring the room
-    creak in floor + trapdoor, use key
-    //needs expanding
 
 */
+    
+    
 }
