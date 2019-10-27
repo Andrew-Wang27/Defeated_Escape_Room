@@ -46,21 +46,21 @@ public class Phone {
     
     public void CodeBookshelfPainting(String u)
     {
-       if(u.equalsIgnoreCase(room1.keyWords[10]))
+        if(u == null)
         {
-            // Code();            
+            System.exit(0); 
         }
-        else if(u.equalsIgnoreCase(room1.keyWords[11]))
+        else if(keys.CODE.name().equalsIgnoreCase(u))
         {
-             //bookshelf();
+            Code.code();             
         }
-        else if(u.equalsIgnoreCase(room1.keyWords[12]))
-        {           
-            //painting();
+        else if(keys.BOOKSHELF.name().equalsIgnoreCase(u))
+        {
+             bookshelf.printStatement(); 
         }
-        else if(u.equalsIgnoreCase(room1.keyWords[13]))
+        else if(keys.PAINTING.name().equalsIgnoreCase(u))
         {           
-            //timer();
+            painting.printStatement(); 
         }
        else
         {
