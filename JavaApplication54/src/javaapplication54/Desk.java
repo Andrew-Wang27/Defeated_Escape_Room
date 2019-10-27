@@ -37,7 +37,11 @@ public class Desk {
 
     void PhoneORLamp(String u)
     {
-        if(u.equalsIgnoreCase(room1.keyWords[8]))
+        if(u == null)
+        {
+            System.exit(0); 
+        }
+        else if(keys.PHONE.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nYou touch the keypad and realize there are keys missing\n"
                     + "on the keypad. You cannot see which ones are missing as the room is still dark.\n"
@@ -45,7 +49,7 @@ public class Desk {
             userInput = ui.getGameInput(); 
             PhoneORLamp(userInput); 
         }
-        else if(u.equalsIgnoreCase(room1.keyWords[9]))
+        else if(keys.LAMP.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nYou turn the lamp on and see a bookshelf across the room\n"
                     + "with only 5 books littering the shelves and a large painting above\n"
