@@ -20,20 +20,24 @@ public class Couch {
         //under these cushions?? to get the matches. Not sure yet. 
         ui.printGameOutput("What do you want to do?\n\n");
         userInput = ui.getGameInput(); 
-        MoveORLeft(userInput);
-        //looking for either MOVE (to move cushions and find matches) OR LEFT towards desk
+        ExploreORLeft(userInput);
+        //looking for either EXPLORE (to move cushions and find matches) OR LEFT towards desk
     }
-    void MoveORLeft(String u)
+    void ExploreORLeft(String u)
     {
-        //set this function up exactly like the function from the flowers file.
-        if(u.equalsIgnoreCase(room1.keyWords[0]))
+        //handles exception thrown when user clicks cancel
+        if(u == null)
+        {
+            System.exit(0); 
+        }
+        else if(keys.EXPLORE.name().equalsIgnoreCase(u))
         {
             //move the cushions to find a box of matches 
             ui.printGameOutput("While moving the cushions around, you find a small box\n"
                     + "with matches inside! Congrats, these might be useful for later.\n");
            desk.printStatement(); 
         }
-        else if(u.equalsIgnoreCase(room1.keyWords[3]))
+        else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("Walking left, you run into a desk\n");
             desk.printStatement();
