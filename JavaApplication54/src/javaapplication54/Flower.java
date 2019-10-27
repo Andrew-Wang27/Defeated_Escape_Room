@@ -13,7 +13,8 @@ public class Flower {
     static Couch couch = new Couch();
     static UserInterface ui = new UserInterface();
     static Room1 room1 = new Room1(); //room object
-    Scanner keyboard = new Scanner(System.in);
+    String userInput;
+    //Scanner keyboard = new Scanner(System.in);
     //String keyWords[] = {"throw", "smell"}; 
     void printStatement()
     {
@@ -21,25 +22,30 @@ public class Flower {
                 + "there are flowers in a glass vase.\n\n");
         ui.printGameOutput("What do you want to do with the flowers in the glass vase?\n\n"); 
         //looking for answers: THROW OR SMELL
-        String userInput = ui.getGameInput();
+        userInput = ui.getGameInput();
         
         //room1.setUserInput(userInput); 
         ThrowOrSmell(userInput); 
     }
     void ThrowOrSmell(String u)
     {
-        if(u.equalsIgnoreCase(room1.keyWords[4]))
+        if(u == null)
+        {
+            System.exit(0); 
+        }
+        else if(keys.THROW.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("You threw the vase\n"); 
             ui.printGameOutput("You managed to grab a piece of broken glass and cut yourself free!\n");
             ui.printGameOutput("You begin to feel your way through the dark and bump into a couch!\n");
             couch.printStatement();
         }
-        else if(u.equalsIgnoreCase((room1.keyWords[5])))
+        else if(keys.SMELL.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("The flowers smell beautifully\n");
-            ui.printGameOutput("Now you are walking forward and bump into a couch!\n");
-           couch.printStatement();
+            ui.printGameOutput("Now what do you want to do?\n\n");
+            userInput = ui.getGameInput(); 
+            ThrowOrSmell(userInput);
             
         }
          /*else if(u.equalsIgnoreCase(keyWords[7]))
