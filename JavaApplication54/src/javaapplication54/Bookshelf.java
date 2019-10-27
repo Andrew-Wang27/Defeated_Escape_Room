@@ -10,8 +10,46 @@ package javaapplication54;
  * @author Gab
  */
 public class Bookshelf {
-    //add class objects here to access their functions
+ //add class objects here to access their functions
+    UserInterface ui = new UserInterface(); 
+    //Code code = new Code(); 
+    //Painting painting = new Painting(); 
+    String userInput = " "; 
     
+    void printStatement()
+    {
+        ui.printGameOutput("You are standing in front of a bookshelf with 5 books on the shelves.\n"
+                + "You open each book and flip through the pages. In each book,\n"
+                + "there is a note with a letter on it. The letters are: KIAAW\n\n"
+                + "What do you want to do now?");
+        userInput = ui.getGameInput(); 
+        CodeOrPainting(userInput); 
+    }
+    
+    void CodeOrPainting(String u)
+    {
+        if(u == null)
+        {
+            System.exit(0); 
+        }
+        else if(keys.CODE.name().equalsIgnoreCase(u))
+        {
+            ui.printGameOutput("\nYou walk back over to the desk to attempt the code.\n");
+            //code.printStatement();
+        }
+        else if(keys.PAINTING.name().equalsIgnoreCase(u))
+        {
+            ui.printGameOutput("\nYou walk over to the painting above the couch.\n");
+            //painting.printStatement(); 
+        }
+        else
+        {
+            ui.printGameOutput("Sorry, we do not recognize that word\n"); 
+            printStatement(); 
+        }
+    }
+    
+    //all pseudocode below has been implemented**************************
     /*
     void printStatement--no arguments
          print:  “there is a bookshelf with 5 books. You open each book and flip through the pages. 
@@ -36,5 +74,7 @@ public class Bookshelf {
         ERROR statement 
         call printstatement of bookshelf
     
-}*/}
+        
+    */
+}
 
