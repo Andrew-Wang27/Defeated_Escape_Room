@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package javaapplication54;
+import java.util.Scanner; 
+import static javaapplication54.Flower.room1;
+import static javaapplication54.Flower.ui;
 
 /**
  *
@@ -11,7 +14,27 @@ package javaapplication54;
  */
 public class Phone {
      //add class objects here to access their functions
-    
+     //Code code = new Code();
+     //BookShelf bookshelf = new BookShelf();
+     Room1 room1 = new Room1();
+     Painting painting = new Painting();
+     CracktheCode Code = new CracktheCode();
+     Bookshelf bookshelf = new Bookshelf();
+     Timer timer = new Timer();
+     UserInterface ui = new UserInterface();
+     Scanner keyboard = new Scanner(System.in);
+     void printStatement()
+    {
+        ui.printGameOutput("you try the phone, but there are keys missing 57136\n" +
+                            "What do you want to do?\n\n"); 
+        //looking for answers: THROW OR SMELL
+        String userInput = ui.getGameInput();
+        CodeBookshelfPainting(userInput);
+         
+         
+    }
+
+
      /*
     void printStatement -- no arguments
         print: you try the phone, but there are keys missing 57136
@@ -21,7 +44,32 @@ public class Phone {
         
     */
     
-    
+    public void CodeBookshelfPainting(String u)
+    {
+       if(u.equalsIgnoreCase(room1.keyWords[10]))
+        {
+            // Code();            
+        }
+        else if(u.equalsIgnoreCase(room1.keyWords[11]))
+        {
+             //bookshelf();
+        }
+        else if(u.equalsIgnoreCase(room1.keyWords[12]))
+        {           
+            //painting();
+        }
+        else if(u.equalsIgnoreCase(room1.keyWords[13]))
+        {           
+            //timer();
+        }
+       else
+        {
+            //else = a word we dont recognize or a word that will not get the 
+            //user out of this situation
+            ui.printGameOutput("Sorry, we do not recognize that word\n"); 
+            printStatement(); 
+        }
+    }
     /*
     void CodeBookshelfPainting(String u)
     {
