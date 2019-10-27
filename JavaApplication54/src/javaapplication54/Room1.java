@@ -16,9 +16,10 @@ import java.util.Scanner;
 //contains room1 functions and calls other files
 //files include "objects" scattered around the room that the user can interact with
 public class Room1 {
-    public static final String keyWords[] = {"move", "wait", "right", "left", "throw", "smell", "forward", "timer", "phone", "lamp", "code", "bookshelf", "painting"};
+    //array of keywords not used anymore. Switched to using enums in keys file.
+    //public static final String keyWords[] = {"move", "wait", "right", "left", "throw", "smell", "forward", "timer", "phone", "lamp", "code", "bookshelf", "painting"};
     static UserInterface ui = new UserInterface();
-    Scanner keyboard = new Scanner(System.in); 
+    //Scanner keyboard = new Scanner(System.in); 
     Room1(){}
     String userInput;
     //the setters and getters go here
@@ -52,8 +53,13 @@ public class Room1 {
     //to MOVE or to WAIT
     void MoveOrWait(String u)
     {
+        //handles the null pointer exception
+         if(u == null)
+        {
+            System.exit(0); 
+        }
         //if the user entered move, then prompt the user 
-        if(u.equalsIgnoreCase(keyWords[0]))
+         else if(keys.MOVE.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("You have decided to move! In which direction would you like to move?\n\n");
             //the answer we are looking for here is left or right
@@ -62,7 +68,7 @@ public class Room1 {
             //pass the userinput 
             FlowersORFall(userInput); 
         }
-        else if(u.equalsIgnoreCase(keyWords[1]))
+        else if(keys.WAIT.name().equalsIgnoreCase(u))
         {
             //if the user entered WAIT, then they eat up 10 minutes from the clock
             ui.printGameOutput("You have decidedd to wait!\n"); 
@@ -87,14 +93,19 @@ public class Room1 {
     }
     void FlowersORFall(String u)
     {
+        //handles the null pointer exception that is thrown when the user presses cancel
+         if(u == null)
+        {
+            System.exit(0); 
+        }
         //if user types right
-        if(u.equalsIgnoreCase(keyWords[2]))
+         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
              Flower flower = new Flower(); 
              flower.printStatement();
         }
         //if user types left
-        else if(u.equalsIgnoreCase(keyWords[3]))
+        else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
             getKnife knife = new getKnife(); 
             knife.printStatement(); 
