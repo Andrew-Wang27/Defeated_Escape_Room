@@ -8,6 +8,7 @@ import java.awt.BorderLayout;
 import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -21,8 +22,8 @@ public class UserInterface extends JFrame{
     static Scanner keyboard;
     static JFrame frame;
     
-    static final int FRAME_LENGTH = 800;
-    static final int FRAME_WIDTH = 600;
+    static final int FRAME_LENGTH = 650;
+    static final int FRAME_WIDTH = 1300;
     
     static final String GAME_TEXT = "The Defeated Presents: Escape Room";
     static final String DEFAULT_PROMPT = "> ";
