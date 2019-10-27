@@ -10,6 +10,38 @@ package javaapplication54;
  * @author Gab
  */
 public class Painting {
+  String userInput = " "; 
+    UserInterface ui = new UserInterface(); 
+    void printStatement()
+    {
+        ui.printGameOutput("The painting is of Toto and Dorothy from the Wizard of Oz\n"
+                + "walking down the yellow brick road. There is a quote written\n"
+                + "at the bottom: We Aren't In Kansas Anymore\nWhat do you want to do now?"); 
+        userInput = ui.getGameInput(); 
+        CodeBookshelf(userInput); 
+    }
+    void CodeBookshelf(String u)
+    {
+        if(u == null)
+        {
+            System.exit(0); 
+        }
+        else if(keys.CODE.name().equalsIgnoreCase(u))
+       {
+           CrackTheCode code = new CrackTheCode(); 
+           code.code(); 
+       }
+       else if(keys.BOOKSHELF.name().equalsIgnoreCase(u))
+       {
+           Bookshelf bookshelf = new Bookshelf();
+           bookshelf.printStatement();
+       }
+       else
+        {
+            ui.printGameOutput("Sorry, we do not recognize that word\n");
+            printStatement(); 
+        }
+    }
     /*
     void printStatement
     print: painting of wizard of oz w/ quote "We arent in Kansas anymore"
@@ -29,6 +61,5 @@ public class Painting {
     else 
         ERROR statement 
         call printstatement of bookshelf
-    testing
     */
 }
