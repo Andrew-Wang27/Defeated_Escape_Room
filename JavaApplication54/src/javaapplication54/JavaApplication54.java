@@ -12,12 +12,14 @@ import java.util.*;
  */
 public class JavaApplication54 {
 
-   static Room1 room1 = new Room1(); 
-    static UserInterface ui = new UserInterface(); 
+   //static Room1 room1 = new Room1(); 
+    //static UserInterface ui = new UserInterface(); 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Room1 room1 = new Room1();
+        UserInterface ui = new UserInterface(); 
         //get user input
         ui.setInterface();
         int userInput;
