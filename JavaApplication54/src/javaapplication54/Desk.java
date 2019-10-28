@@ -14,7 +14,7 @@ public class Desk {
    String userInput; 
     UserInterface ui = new UserInterface(); 
     Room1 room1 = new Room1(); 
-    //Phone phone = new Phone(); 
+    Phone phone = new Phone(); 
     
     void printStatement()
     {
@@ -56,7 +56,7 @@ public class Desk {
                     + "the couch on the other side of the room. The painting has a small\n"
                     + "quote on it. On the desk you see a keypad next to the locked drawer.\n"
                     + "It looks like it will allow a 5 letter/number password.\n");
-            //phone.printStatement(); 
+            phone.printStatement(); 
         }
         /*else if u.equalsIgnoreCase(room1.keyWords[location of TIMER]
         call timer class to display time to user
