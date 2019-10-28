@@ -28,7 +28,7 @@ public class Painting {
         }
         else if(keys.CODE.name().equalsIgnoreCase(u))
        {
-           CrackTheCode code = new CrackTheCode(); 
+           CracktheCode code = new CracktheCode(); 
            code.code(); 
        }
        else if(keys.BOOKSHELF.name().equalsIgnoreCase(u))
