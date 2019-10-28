@@ -12,8 +12,8 @@ package javaapplication54;
 public class Bookshelf {
  //add class objects here to access their functions
     UserInterface ui = new UserInterface(); 
-    //Code code = new Code(); 
-    //Painting painting = new Painting(); 
+    CracktheCode code = new CracktheCode(); 
+    Painting painting = new Painting(); 
     String userInput = " "; 
     
     void printStatement()
@@ -35,12 +35,12 @@ public class Bookshelf {
         else if(keys.CODE.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nYou walk back over to the desk to attempt the code.\n");
-            //code.printStatement();
+            code.code();
         }
         else if(keys.PAINTING.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nYou walk over to the painting above the couch.\n");
-            //painting.printStatement(); 
+            painting.printStatement(); 
         }
         else
         {
