@@ -33,8 +33,12 @@ public class getKnife {
     }
     void ForwardORRight(String u)
     {
+        if(u == null)
+        {
+            System.exit(0); 
+        }
         //if forward
-         if(u.equalsIgnoreCase(room1.keyWords[6]))
+         if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("You advance forward in the dark.\n"
                     + "With your hands out in front of you, you find a desk with\n"
@@ -43,7 +47,7 @@ public class getKnife {
            desk.printStatement(); 
         }
          //if right
-        else if(u.equalsIgnoreCase((room1.keyWords[2])))
+        else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("You are walking towards the right and run into a couch\n");
             couch.printStatement(); 
