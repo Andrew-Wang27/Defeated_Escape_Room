@@ -29,6 +29,7 @@ public class Painting {
         {
             System.exit(0); 
         }
+        
         else if(keys.CODE.name().equalsIgnoreCase(u))
        {
            CracktheCode code = new CracktheCode(); 
