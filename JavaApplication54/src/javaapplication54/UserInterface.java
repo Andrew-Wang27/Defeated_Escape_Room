@@ -13,6 +13,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.text.DefaultCaret;
+import javax.swing.JPanel; 
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
 /**
  *
  * @author Gab
@@ -21,6 +25,7 @@ public class UserInterface extends JFrame{
     static private JTextArea gameText;
     static Scanner keyboard;
     static JFrame frame;
+    static JPanel panel; 
     
     static final int FRAME_LENGTH = 650;
     static final int FRAME_WIDTH = 1300;
@@ -52,6 +57,25 @@ public class UserInterface extends JFrame{
         //   no longer used w/ switch to JOptionPane
         keyboard = new Scanner(System.in);
         
+    }
+    /**
+     * getPassword method creates a dialog box where the userInput will be hidden behind asterisks
+     * @return userInput - returns userInput so the input can be compared with the key word
+     */
+    String getPassword()//*********************************
+    {
+        JLabel code = new JLabel("Enter Code"); 
+        JTextField password = new JPasswordField(); 
+        
+        Object[] ob = {code, password};//required for the showConfirmDialog method below
+        String userInput = ""; 
+        int result = JOptionPane.showConfirmDialog(frame, ob, "Enter: ", JOptionPane.OK_CANCEL_OPTION); 
+        if(result == JOptionPane.OK_OPTION)//if user pressed OK on the dialog box
+        {
+            userInput = password.getText(); 
+            
+        }
+        return userInput; 
     }
     static void printGameOutput(String printString) {
         gameText.append(printString);
