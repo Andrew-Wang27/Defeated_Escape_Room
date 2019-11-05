@@ -5,6 +5,9 @@
  */
 package javaapplication54;
 
+import static javaapplication54.Flower.ui;
+import static javaapplication54.Room1.ui;
+
 
 /**
  *
@@ -22,6 +25,7 @@ public class Desk {
     + "The desk has multiple wires leading to a phone and a lamp.\n"
                 +"You also pull on a mysterious, locked drawer.\n"+
                 "What would you like to try first?\n"); 
+        ui.printGameOutput("Enter PHONE or LAMP");
         userInput = ui.getGameInput(); 
         PhoneORLamp(userInput); 
     }
@@ -46,6 +50,7 @@ public class Desk {
             ui.printGameOutput("\nYou touch the keypad and realize there are keys missing\n"
                     + "on the keypad. You cannot see which ones are missing as the room is still dark.\n"
                     + "What do you want to do?\n"); 
+            ui.printGameOutput("Enter PHONE or LAMP\n");
             userInput = ui.getGameInput(); 
             PhoneORLamp(userInput); 
         }
