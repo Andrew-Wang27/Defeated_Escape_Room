@@ -7,6 +7,7 @@ package javaapplication54;
 import java.util.Scanner; 
 import static javaapplication54.Flower.room1;
 import static javaapplication54.Flower.ui;
+import static javaapplication54.Room1.ui;
 
 /**
  *
@@ -28,6 +29,7 @@ public class Phone {
         ui.printGameOutput("you try the phone, but there are keys missing 57136\n" +
                             "What do you want to do?\n\n"); 
         //looking for answers: THROW OR SMELL
+        ui.printGameOutput("Enter CODE or BOOKSHELF or PAINTING\n");
         String userInput = ui.getGameInput();
         CodeBookshelfPainting(userInput);
          
