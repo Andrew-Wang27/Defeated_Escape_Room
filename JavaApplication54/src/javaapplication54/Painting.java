@@ -5,6 +5,8 @@
  */
 package javaapplication54;
 
+import static javaapplication54.Room1.ui;
+
 /**
  *
  * @author Gab
@@ -17,6 +19,7 @@ public class Painting {
         ui.printGameOutput("The painting is of Toto and Dorothy from the Wizard of Oz\n"
                 + "walking down the yellow brick road. There is a quote written\n"
                 + "at the bottom: We Aren't In Kansas Anymore\nWhat do you want to do now?"); 
+        ui.printGameOutput("\nEnter CODE or BOOKSHELF\n");
         userInput = ui.getGameInput(); 
         CodeBookshelf(userInput); 
     }
