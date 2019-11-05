@@ -5,6 +5,7 @@
  */
 package javaapplication54;
 import java.util.Scanner; 
+import static javaapplication54.Room1.ui;
 /**
  *
  * @author Gab
@@ -21,6 +22,7 @@ public class Flower {
         ui.printGameOutput("The aroma of flowers has grown. You feel around and\n"
                 + "there are flowers in a glass vase.\n\n");
         ui.printGameOutput("What do you want to do with the flowers in the glass vase?\n\n"); 
+        ui.printGameOutput("Enter THROW or SMELL\n");
         //looking for answers: THROW OR SMELL
         userInput = ui.getGameInput();
         
@@ -42,8 +44,9 @@ public class Flower {
         }
         else if(keys.SMELL.name().equalsIgnoreCase(u))
         {
-            ui.printGameOutput("The flowers smell beautifully\n");
+            ui.printGameOutput("The flowers smell beautiful\n");
             ui.printGameOutput("Now what do you want to do?\n\n");
+            ui.printGameOutput("Enter THROW or SMELL\n");
             userInput = ui.getGameInput(); 
             ThrowOrSmell(userInput);
             
