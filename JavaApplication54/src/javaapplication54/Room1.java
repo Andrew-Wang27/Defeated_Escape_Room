@@ -42,6 +42,7 @@ public class Room1 {
         
         //ask the user what they want to do
         //the answers we are looking for: either move or wait
+        ui.printGameOutput("Enter MOVE or WAIT\n");
         ui.printGameOutput("What do you want to do?\n\n"); //expand later to describe number value
         userInput = ui.getGameInput();
          
@@ -63,6 +64,7 @@ public class Room1 {
         {
             ui.printGameOutput("You have decided to move! In which direction would you like to move?\n\n");
             //the answer we are looking for here is left or right
+            ui.printGameOutput("Enter LEFT or RIGHT\n");
             userInput = ui.getGameInput();  
             //call the flowers or fall function. 
             //pass the userinput 
