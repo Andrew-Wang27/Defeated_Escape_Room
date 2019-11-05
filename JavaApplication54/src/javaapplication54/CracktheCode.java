@@ -23,7 +23,7 @@ UserInterface ui = new UserInterface();
         {
             System.exit(0);
         }
-        else if(keys.WAIKA.name().equalsIgnoreCase(userInput))
+        else if(keys.WAIKA.name().equals(userInput))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "The drawer slides open and reveals the contents inside./\n"
