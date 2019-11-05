@@ -16,8 +16,9 @@ UserInterface ui = new UserInterface();
     
     void code()
     {
-        ui.printGameOutput("\nEnter the code: \n");
-        userInput = ui.getGameInput(); 
+        //ui.printGameOutput("\nEnter the code: \n");
+        //userInput = ui.getGameInput(); 
+        userInput = ui.getPassword();
         if(userInput == null)
         {
             System.exit(0);
