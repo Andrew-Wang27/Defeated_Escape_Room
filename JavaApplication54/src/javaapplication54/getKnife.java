@@ -6,6 +6,7 @@
 package javaapplication54;
 
 import java.util.Scanner; 
+import static javaapplication54.Room1.ui;
 /**
  *
  * @author Gab
@@ -28,6 +29,7 @@ public class getKnife {
         "You keep the knife in your pocket.\n\n");
         ui.printGameOutput("In which direction would you like to go?\n\n"); 
         //forward or right is what we are looking for here
+        ui.printGameOutput("Enter FORWARD or RIGHT\n");
         String userInput = ui.getGameInput(); 
         ForwardORRight(userInput); 
     }
