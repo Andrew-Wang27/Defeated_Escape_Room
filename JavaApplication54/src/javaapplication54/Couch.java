@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package javaapplication54;
+
+import static javaapplication54.Room1.ui;
+
 /**
  *
  * @author Gab
@@ -19,6 +22,7 @@ public class Couch {
         //unsure if we should hint to the user that there might be something 
         //under these cushions?? to get the matches. Not sure yet. 
         ui.printGameOutput("What do you want to do?\n\n");
+        ui.printGameOutput("enter EXPLORE or LEFT\n");
         userInput = ui.getGameInput(); 
         ExploreORLeft(userInput);
         //looking for either EXPLORE (to move cushions and find matches) OR LEFT towards desk
