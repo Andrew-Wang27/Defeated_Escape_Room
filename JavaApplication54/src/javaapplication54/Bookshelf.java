@@ -5,6 +5,8 @@
  */
 package javaapplication54;
 
+import static javaapplication54.Room1.ui;
+
 /**
  *
  * @author Gab
@@ -22,6 +24,7 @@ public class Bookshelf {
                 + "You open each book and flip through the pages. In each book,\n"
                 + "there is a note with a letter on it. The letters are: KIAAW\n\n"
                 + "What do you want to do now?");
+        ui.printGameOutput("\nenter CODE or PAINTING\n");
         userInput = ui.getGameInput(); 
         CodeOrPainting(userInput); 
     }

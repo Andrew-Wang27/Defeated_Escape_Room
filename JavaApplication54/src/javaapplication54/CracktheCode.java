@@ -5,6 +5,8 @@
  */
 package javaapplication54;
 
+import static javaapplication54.Room1.ui;
+
 /**
  *
  * @author Gab
@@ -28,11 +30,13 @@ UserInterface ui = new UserInterface();
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "The drawer slides open and reveals the contents inside./\n"
                     + "A medical kit and key are inside."); 
+            ui.printGameOutput("enter CODE or BOOKSHELF or PAINTING\n");
             rug.printStatement(); 
         }
         else 
         {
             ui.printGameOutput("\nWrong code! What would you like to do now?\n"); 
+            ui.printGameOutput("code CODE or BOOKSHELF or PAINTING");
             userInput = ui.getGameInput(); 
             CodeBookshelfPainting(userInput); 
         }
