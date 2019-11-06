@@ -19,6 +19,7 @@ public class JavaApplication54 {
      */
     public static void main(String[] args) {
         Room1 room1 = new Room1();
+        Room2 room2 = new Room2(); 
         UserInterface ui = new UserInterface(); 
         //get user input
         ui.setInterface();
@@ -36,6 +37,8 @@ public class JavaApplication54 {
         
         //open room 1
         room1.OpeningScenario();
+        //after room1 finishes, user moves to room2
+        room2.OpeningScenario(); 
     }
     
  }
