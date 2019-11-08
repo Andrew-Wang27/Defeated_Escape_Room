@@ -40,8 +40,8 @@ public class Room2 {
         }
         else if(keys.TABLE.name().equalsIgnoreCase(u))
         {
-            //Table table = new Table(); 
-            //table.printStatement(); 
+            Table table = new Table(); 
+            table.printStatement(); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
