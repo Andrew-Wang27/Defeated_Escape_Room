@@ -74,8 +74,8 @@ public class Table {
         }
         else if(keys.CABINET.name().equalsIgnoreCase(u))
         {
-            //FilingCabinet cabinet = new FilingCabinet(); 
-            //cabinet.printStatement(); 
+            FilingCabinet cabinet = new FilingCabinet(); 
+            cabinet.printStatement(); 
         }
         else if(keys.FURNACE.name().equalsIgnoreCase(u))
         {
