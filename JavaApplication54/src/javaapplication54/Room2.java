@@ -45,8 +45,8 @@ public class Room2 {
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
-            //Toolbox toolbox = new Toolbox(); 
-            //toolbox.printStatement(); 
+            Toolbox toolbox = new Toolbox(); 
+            toolbox.printStatement(); 
         }
         else
         {
