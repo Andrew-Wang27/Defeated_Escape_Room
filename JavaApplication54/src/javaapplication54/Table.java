@@ -79,8 +79,8 @@ public class Table {
         }
         else if(keys.FURNACE.name().equalsIgnoreCase(u))
         {
-            //Furnace furnace = new Furnace(); 
-            //furnace.printStatement(); 
+            Furnace furnace = new Furnace(); 
+            furnace.printStatement(); 
         }
         else
         {
