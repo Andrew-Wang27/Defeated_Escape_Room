@@ -125,13 +125,13 @@ public class FilingCabinet {
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
-            //Toolbox toolbox = new Toolbox();
-            //toolbox.printStatement(); 
+            Toolbox toolbox = new Toolbox();
+            toolbox.printStatement(); 
         }
         else if(keys.FURNACE.name().equalsIgnoreCase(u))
         {
-            //Furnace furnace = new Furnace(); 
-            //furnace.printStatement(); 
+            Furnace furnace = new Furnace(); 
+            furnace.printStatement(); 
         }
         else if(keys.CABINET.name().equalsIgnoreCase(u))
         {
