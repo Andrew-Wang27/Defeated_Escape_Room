@@ -41,12 +41,7 @@ public class FilingCabinet {
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
-            
-            ui.printGameOutput("\n\nThe drawer slides open and creaks loudly. Inside\n"
-                    + "there are around 20 files stuffed with papers.\n"
-                    + "Enter a number in the range of 1-20 to investigate. ");
-            userInput = ui.getGameInput(); 
-            File(userInput); 
+            File(); 
         }
         else if(keys.NO.name().equalsIgnoreCase(u))
         {
@@ -62,54 +57,59 @@ public class FilingCabinet {
         }
     }
     /**
-     * File method accepts user input and compares it to different file numbers
-     * is user enters 18 (the desired file number), output will be displayed that contains secret code
+     * File method asks for user input
+     * if user enters 18 (the desired file number), output will be displayed that contains secret code
      * any other file number entered (in 1-20 range) will have a random file content displayed (meaningless)
      * all options given 3 options: FURNACE, TOOLBOX, or CABINET
      * @param u - userInput String passed from YesOrNo method
      */
-    void File(String u)
+    void File()
     {
+        String u; 
+        String answer; 
+        ui.printGameOutput("\n\nThe drawer slides open and creaks loudly. Inside\n"
+            + "there are around 20 files stuffed with papers.\n"); 
+        do{
+            u = ""; 
+            answer = ""; 
+            ui.printGameOutput("\nEnter a number in the range of 1-20 to investigate a file.\n"); 
+            u = ui.getGameInput(); 
         if(u == null)
         {
             System.exit(0); 
         }
         else if(u.equals("18"))
         {
-            ui.printGameOutput("\nThe file says: 1002 Park Ave, Florham Park, NJ");
-            ui.printGameOutput("\nWould you like to go to the TOOLBOX, FURNACE, or stay at the CABINET?"); 
-            userInput = ui.getGameInput(); 
-            ToolBoxOrFurnaceOrCabinet(userInput); 
+            ui.printGameOutput("\nThe file says: 1002 Park Ave, Florham Park, NJ\n");
         }
         else if(u.equals("4") || u.equals("20") || u.equals("11")|| u.equals("8") || u.equals("15") || u.equals("10")|| u.equals("17"))
         {
-            ui.printGameOutput("\nThe file says: YOU'LL NEVER LEAVE THIS ROOM\n"); 
-            ui.printGameOutput("Would you like to go to the TOOLBOX, FURNACE or stay at the CABINET?"); 
-            userInput = ui.getGameInput(); 
-            ToolBoxOrFurnaceOrCabinet(userInput); 
+            ui.printGameOutput("\nThe file says: YOU'LL NEVER LEAVE THIS ROOM\n");  
         }
         else if(u.equals("1") || u.equals("13") || u.equals("5") || u.equals("19") || u.equals("7") || u.equals("12")|| u.equals("16"))
         {
             ui.printGameOutput("\nThe file says: YOU AREN'T SMART ENOUGH TO ESCAPE\n"); 
-            ui.printGameOutput("Would you like to go to the TOOLBOX, FURNACE or stay at the CABINET?"); 
-            userInput = ui.getGameInput(); 
-            ToolBoxOrFurnaceOrCabinet(userInput); 
         }
          else if(u.equals("2") || u.equals("3") || u.equals("6") || u.equals("7") || u.equals("9") || u.equals("14"))
         {
             ui.printGameOutput("\nThe file says: HAHA\n"); 
-            ui.printGameOutput("Would you like to go to the TOOLBOX, FURNACE or stay at the CABINET?"); 
-            userInput = ui.getGameInput(); 
-            ToolBoxOrFurnaceOrCabinet(userInput); 
         }
         
         else
         {
             ui.printGameOutput("\nSorry, we do not recognize that file number\n"); 
-            ui.printGameOutput("\nEnter a number 1 - 20\n");  
-            userInput = ui.getGameInput(); 
-            File(userInput);
         }
+        ui.printGameOutput("\nPick another file?\nEnter YES or anything else to move on.\n"); 
+        answer = ui.getGameInput(); 
+        if(answer == null)
+        {
+            System.exit(0); 
+        }
+        }while(keys.YES.name().equalsIgnoreCase(answer));
+        
+        ui.printGameOutput("\nWould you like to go to the TOOLBOX, FURNACE, or stay at the CABINET?"); 
+        userInput = ui.getGameInput(); 
+        ToolBoxOrFurnaceOrCabinet(userInput); 
     }
     /**
      * if user enters TOOLBOX - object created of that class and print statement called
@@ -135,9 +135,7 @@ public class FilingCabinet {
         }
         else if(keys.CABINET.name().equalsIgnoreCase(u))
         {
-            ui.printGameOutput("\nEnter a file 1-20:\n");
-            userInput = ui.getGameInput(); 
-            File(userInput); 
+            File(); 
         }
         else
         {
