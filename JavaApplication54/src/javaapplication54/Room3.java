@@ -45,8 +45,8 @@ public class Room3 {
         }
         else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
         {
-            //Pooltable pooltable = new Pooltable(); 
-            //pooltable.printStatement(); 
+            Pooltable pooltable = new Pooltable(); 
+            pooltable.printStatement(); 
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
