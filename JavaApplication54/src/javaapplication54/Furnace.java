@@ -15,6 +15,10 @@ public class Furnace {
     FilingCabinet cabinet = new FilingCabinet();
     String userInput = ""; 
     
+     /**
+     * printStatement describes the furnace, and what the user options are 
+     * userInput is accepted and sent to method ToolboxOrCabinet.
+     */
     void printStatement()
     {
         ui.printGameOutput("\n\nYou walked towards the furnace. It is a very "
@@ -25,7 +29,13 @@ public class Furnace {
         userInput = ui.getGameInput(); 
         ToolBoxOrCabinet(userInput); 
     }
-    
+    /**
+     * this method checks the userinput. if the input is TOOLBOX, the user will be taken to the toolbox printstatement method.
+     * if the input is cabinet, the user will be taken to the cabinet printstatement method.
+     * Wrong inputs will repeat the printstatement.
+     * 
+     * @param u 
+     */
     void ToolBoxOrCabinet(String u)
     {
         if(userInput == null)
@@ -36,10 +46,15 @@ public class Furnace {
         {
             toolbox.printStatement();
         }
-        else 
+        else if(keys.CABINET.name().equalsIgnoreCase(userInput))
         {
             cabinet.printStatement();
-            
+        }
+        else
+        {
+            ui.printGameOutput("\nPlease enter a valid command.");
+            printStatement();
+
         }       
     }
 }
