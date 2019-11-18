@@ -16,7 +16,7 @@ public class Toolbox {
     
     /**
      * printStatement describes the toolbox, location in the room, and what the user options are 
-     * userInput is accepted and sent to method UnderOrCandle
+     * userInput is accepted and sent to method CODE.
      */
     void printStatement()
     {
@@ -27,6 +27,13 @@ public class Toolbox {
         code(userInput); 
     }
     
+    /**
+     * this method checks the userinput. if the input is 1002, the toolbox is unlocked and the key is acquired.
+     * if the input is wrong then the user gets a choice of TRYAGAIN or MOVE. This input will be sent to the tryAgainOrMove method.
+     * 
+     * @param u 
+     */
+    
      void code(String u)
     {
         //ui.printGameOutput("\nEnter the code: \n");
@@ -36,7 +43,7 @@ public class Toolbox {
         {
             System.exit(0);
         }
-        else if(keys.WAIKA.name().equals(userInput))
+        else if(userInput.equals("1002"))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "You opened the toolbox and acquired the key"); 
@@ -52,6 +59,11 @@ public class Toolbox {
         
     }
      
+     /**
+      * This method tests the user input. If the input is TRYAGAIN, the user is taken back to the printstatement method.
+      * If the input is MOVE, the user can enter CABINET or FURNACE and this input is passed to the CabinetOrFurnace method 
+      * of the table object. 
+      */
      void tryAgainOrMove()
      {
         userInput = ui.getGameInput(); 
@@ -69,6 +81,13 @@ public class Toolbox {
                ui.printGameOutput("\nEnter CABINET or FURNACE");
                userInput = ui.getGameInput();
                table.CabinetOrFurnace(userInput);
+           }
+           else
+           {
+               ui.printGameOutput("\nPlease enter a choice");
+               ui.printGameOutput("\nEnter TRYAGAIN or MOVE");
+               tryAgainOrMove();
+
            }
          
      }
