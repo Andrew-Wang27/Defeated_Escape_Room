@@ -42,9 +42,10 @@ public class Pooltable {
         }
         else if(keys.NO.name().equalsIgnoreCase(u))
         {
-            ui.printGameOutput("\nDo you want to go to the BAR or DARTBOARD?\n"); 
+            ui.printGameOutput("\nDo you want to go to the BAR or DARTBOARD?\n"
+                    + "Or have you just thought of a question to ask the magic BALL?"); 
             userInput = ui.getGameInput(); 
-            BarOrDartBoard(userInput);  
+            BarOrDartBoardOrBall(userInput);  
         }
         else
         {
@@ -90,14 +91,21 @@ public class Pooltable {
             {
                 ui.printGameOutput("\nCannot predict now\n");
             }
-            ui.printGameOutput("\nEnter: YES to ask another question or any other input to exit the 8-ball\n"); 
+            ui.printGameOutput("\nEnter: YES to ask another question or QUIT to exit the 8-ball\n"); 
             answer = ui.getGameInput(); 
+            
+            while(!(keys.YES.name().equalsIgnoreCase(answer)) && !(keys.QUIT.name().equalsIgnoreCase(answer)) && answer != null)
+            {
+                ui.printGameOutput("\nIncorrect input.\n"); 
+                ui.printGameOutput("\nEnter: YES to ask another question or QUIT to exit the 8-ball\n"); 
+                answer = ui.getGameInput();  
+            }
         }while(keys.YES.name().equalsIgnoreCase(answer));
         
-        ui.printGameOutput("\nNow that you've finished asking your questions,\n"
-                + "do you want to go to the BAR or DARTBOARD?\n"); 
+        ui.printGameOutput("\nWhat do you want to do now? Go investigate the BAR, DARTBOARD\n"
+                + ", or have you thought of another question for the magic BALL?\n"); 
         userInput = ui.getGameInput();
-        BarOrDartBoard(userInput); 
+        BarOrDartBoardOrBall(userInput); 
     }
     /**
      * method accepts user input from Eightball and YesOrNo method
@@ -105,7 +113,7 @@ public class Pooltable {
      * if user enters DartBoard - dartboard object and print statement called 
      * @param u 
      */
-    void BarOrDartBoard(String u)
+    void BarOrDartBoardOrBall(String u)
     {
         if(u == null)
         {
@@ -121,11 +129,15 @@ public class Pooltable {
             //DartBoard dart = new DartBoard(); 
             //dart.printStatement(); 
         }
+        else if(keys.BALL.name().equalsIgnoreCase(u))
+        {
+            EightBall(); 
+        }
         else
         {
-            ui.printGameOutput("\nSorry, we do not recognize that word\nEnter BAR or DARTBOARD\n"); 
+            ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
             userInput = ui.getGameInput();
-            BarOrDartBoard(userInput); 
+            BarOrDartBoardOrBall(userInput); 
         }
     }
     /**
