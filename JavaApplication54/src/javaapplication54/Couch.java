@@ -11,6 +11,7 @@ import static javaapplication54.Room1.ui;
  *
  * @author Gab
  */
+//testing something
 public class Couch {
     String userInput; 
     Room1 room1 = new Room1(); 
