@@ -44,8 +44,8 @@ public class DartBoard {
         }
         else if(keys.TABLE.name().equalsIgnoreCase(u))
         {
-            //Table3 table3 = new Table3(); 
-            //table3.printStatement(); 
+            Table3 table3 = new Table3(); 
+            table3.printStatement(); 
         }
         else
         {
