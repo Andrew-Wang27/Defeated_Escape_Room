@@ -69,8 +69,8 @@ public class Table3 {
         }
         else if(keys.CARDS.name().equalsIgnoreCase(u))
         {
-           //Cards cards = new Cards(); 
-           //cards.printStatement(); 
+           Cards cards = new Cards(); 
+           cards.printStatement(); 
         }
         else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
         {
