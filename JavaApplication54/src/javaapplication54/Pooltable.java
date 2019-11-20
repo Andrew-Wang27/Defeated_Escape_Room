@@ -121,8 +121,8 @@ public class Pooltable {
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
-            //Bar bar = new Bar();
-            //bar.printStatement(); 
+            bar Bar = new bar();
+            Bar.printStatement(); 
         }
         else if(keys.DARTBOARD.name().equalsIgnoreCase(u))
         {

@@ -36,14 +36,11 @@ public class Toolbox {
     
      void code(String u)
     {
-        //ui.printGameOutput("\nEnter the code: \n");
-        //userInput = ui.getGameInput(); 
-        //userInput = ui.getPassword();
-        if(userInput == null)
+        if(u == null)
         {
             System.exit(0);
         }
-        else if(userInput.equals("1002"))
+        else if(u.equals("1002"))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "You opened the toolbox and acquired the key"); 

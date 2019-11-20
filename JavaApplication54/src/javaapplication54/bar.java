@@ -14,9 +14,9 @@ package javaapplication54;
 public class bar {
     UserInterface ui = new UserInterface(); 
     Pooltable pooltable = new Pooltable();
-    //Table3 littletable = new Table3();
-    //Cards cards = new Cards();
-    //DartBoard dartboard = new DartBoard();
+    Table3 littletable = new Table3();
+    Cards cards = new Cards();
+    DartBoard dartboard = new DartBoard();
     String userInput = ""; 
     
     /**
@@ -41,14 +41,12 @@ public class bar {
     
      void code(String u)
     {
-        //ui.printGameOutput("\nEnter the code: \n");
-        //userInput = ui.getGameInput(); 
-        //userInput = ui.getPassword();
-        if(userInput == null)
+       
+        if(u == null)
         {
             System.exit(0);
         }
-        else if(keys.ROYALFLUSH.name().equalsIgnoreCase(userInput))
+        else if(keys.ROYALFLUSH.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nCongrats! You got the code right!\n"
                     + "You unlocked the laptop which shows an article about "
@@ -89,7 +87,7 @@ public class bar {
            }
            else if(keys.LITTLETABLE.name().equalsIgnoreCase(u))
            {
-               //littletable.printStatement();
+               littletable.printStatement();
            }
            else
            {
@@ -115,11 +113,11 @@ public class bar {
            }
            else if(keys.CARDS.name().equalsIgnoreCase(u))
            {
-               //cards.printStatement();
+               cards.printStatement();
            }
            else if(keys.DARTBOARD.name().equalsIgnoreCase(u))
            {
-               //dartboard.printStatement();
+               dartboard.printStatement();
            }
            else
            {
