@@ -52,7 +52,6 @@ public class Room3 {
         {
             bar Bar = new bar(); 
             Bar.printStatement();
-            //ui.printGameOutput("here is the error");
         }
         else
         {
