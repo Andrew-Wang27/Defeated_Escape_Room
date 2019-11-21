@@ -3,26 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package javaapplication54;
-
 
 /**
  *
  * @author ahmed
  */
 public class bar {
-    UserInterface ui = new UserInterface(); 
+    
+    UserInterface ui = new UserInterface();
     Pooltable pooltable = new Pooltable();
     Table3 littletable = new Table3();
-    Cards cards = new Cards();
+    //Cards cards = new Cards();
     DartBoard dartboard = new DartBoard();
-    String userInput = ""; 
+    String userInput = "";
     
     /**
      * printStatement describes the bar with a laptop, and what the user options are 
      * userInput is accepted and sent to method CODE.
      */
+    
     void printStatement()
     {
         ui.printGameOutput("\n\nYou walked to a bar which has laptop with "
@@ -38,15 +38,17 @@ public class bar {
      * 
      * @param u 
      */
-    
+
      void code(String u)
     {
-       
-        if(u == null)
+        //ui.printGameOutput("\nEnter the code: \n");
+        //userInput = ui.getGameInput(); 
+        //userInput = ui.getPassword();
+        if(userInput == null)
         {
             System.exit(0);
         }
-        else if(keys.ROYALFLUSH.name().equalsIgnoreCase(u))
+        else if(keys.ROYALFLUSH.name().equalsIgnoreCase(userInput))
         {
             ui.printGameOutput("\nCongrats! You got the code right!\n"
                     + "You unlocked the laptop which shows an article about "
@@ -55,7 +57,7 @@ public class bar {
             ui.printGameOutput("\nEnter POOLTABLE or LITTLETABLE");
             userInput = ui.getGameInput();
             PoolTableOrLittleTable(userInput);
-            
+
         }
         else 
         {
@@ -64,10 +66,10 @@ public class bar {
             ui.printGameOutput("Enter CARDS or DARTBOARD");
             userInput = ui.getGameInput();
             CardsOrDartBoard(userInput);
-            
-            
+
+
         }       
-        
+
     }
      
      /**
@@ -87,7 +89,7 @@ public class bar {
            }
            else if(keys.LITTLETABLE.name().equalsIgnoreCase(u))
            {
-               littletable.printStatement();
+               //littletable.printStatement();
            }
            else
            {
@@ -97,10 +99,9 @@ public class bar {
                PoolTableOrLittleTable(u);
 
            }
-         
+
      }
-     
-     /**
+  /**
       * This method tests the user input. If the input is CARDS, the user is taken to the printstatement method of cards class.
       * If the input is DARTBOARD, the user is taken to the printstatement method of dartboard class. 
       * of the table object. 
@@ -113,11 +114,11 @@ public class bar {
            }
            else if(keys.CARDS.name().equalsIgnoreCase(u))
            {
-               cards.printStatement();
+               //cards.printStatement();
            }
            else if(keys.DARTBOARD.name().equalsIgnoreCase(u))
            {
-               dartboard.printStatement();
+               //dartboard.printStatement();
            }
            else
            {
@@ -127,6 +128,8 @@ public class bar {
                CardsOrDartBoard(u);
 
            }
-         
+
      }
+
+       
 }

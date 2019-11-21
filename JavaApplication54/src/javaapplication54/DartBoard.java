@@ -39,8 +39,8 @@ public class DartBoard {
         }
         else if(keys.CARDS.name().equalsIgnoreCase(u))
         {
-           Cards cards = new Cards(); 
-           cards.printStatement(); 
+           //Cards cards = new Cards(); 
+           //cards.printStatement(); 
         }
         else if(keys.TABLE.name().equalsIgnoreCase(u))
         {
