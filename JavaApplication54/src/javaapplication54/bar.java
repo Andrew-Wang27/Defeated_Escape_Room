@@ -14,7 +14,6 @@ public class bar {
     UserInterface ui = new UserInterface();
     Pooltable pooltable = new Pooltable();
     Table3 littletable = new Table3();
-    //Cards cards = new Cards();
     DartBoard dartboard = new DartBoard();
     String userInput = "";
     
@@ -89,7 +88,7 @@ public class bar {
            }
            else if(keys.LITTLETABLE.name().equalsIgnoreCase(u))
            {
-               //littletable.printStatement();
+               littletable.printStatement();
            }
            else
            {
@@ -114,11 +113,12 @@ public class bar {
            }
            else if(keys.CARDS.name().equalsIgnoreCase(u))
            {
-               //cards.printStatement();
+               Cards cards = new Cards();
+               cards.printStatement();
            }
            else if(keys.DARTBOARD.name().equalsIgnoreCase(u))
            {
-               //dartboard.printStatement();
+               dartboard.printStatement();
            }
            else
            {
