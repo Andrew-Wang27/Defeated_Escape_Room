@@ -11,7 +11,7 @@ package javaapplication54;
  */
 public class Cards {
     UserInterface ui = new UserInterface(); 
-    //Table3 littletable = new Table3();
+    Table3 littletable = new Table3();
     bar Bar = new bar();
     String userInput = ""; 
     
@@ -30,19 +30,17 @@ public class Cards {
         userInput = ui.getGameInput(); 
         barOrLittleTable(userInput); 
     }
-    
+
     /**
      * this method checks the userinput. if the input is ROYALFLUSH, the laptop and the user can either go to the POOLTABLE or LITTLETABLE.This input will be sent to the pooltableOrLittleTable method.
      * if the input is wrong then the user gets a choice of CARDS or DARTBOARD. This input will be sent to the cardsOrPoolTable method.
      * 
      * @param u 
      */
-    
+
      void barOrLittleTable(String u)
     {
-        //ui.printGameOutput("\nEnter the code: \n");
-        //userInput = ui.getGameInput(); 
-        //userInput = ui.getPassword();
+        
         if(u == null)
         {
             System.exit(0);
@@ -50,19 +48,19 @@ public class Cards {
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
             Bar.printStatement();
-            
+
         }
         else if(keys.LITTLETABLE.name().equalsIgnoreCase(u))
         {
-            //littletable.printStatement();
-            
-            
+            littletable.printStatement();
+
+
         }     
         else
         {
             ui.printGameOutput("\nEnter a valid choice:");
             printStatement();
         }
-        
+
     }
 }
