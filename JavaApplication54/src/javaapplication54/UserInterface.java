@@ -77,8 +77,16 @@ public class UserInterface extends JFrame{
         }
         return userInput; 
     }
-    static void printGameOutput(String printString) {
-        gameText.append(printString);
+    static void printGameOutput(String printString) throws InterruptedException {
+        
+        for(int i = 0; i < printString.length(); i++)
+        {
+            char c = printString.charAt(i);
+            String s = String.valueOf(c);
+            gameText.append(s);
+            Thread.sleep(40);
+
+        }
         //the following text was added to automatically focus on the most recent line added on the frame - Gab
         gameText.setCaretPosition(gameText.getDocument().getLength());
     }
