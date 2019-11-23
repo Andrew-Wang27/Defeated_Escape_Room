@@ -14,7 +14,7 @@ import static javaapplication54.Room1.ui;
 public class Painting {
   String userInput = " "; 
     UserInterface ui = new UserInterface(); 
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("The painting is of Toto and Dorothy from the Wizard of Oz\n"
                 + "walking down the yellow brick road. There is a quote written\n"
@@ -23,7 +23,7 @@ public class Painting {
         userInput = ui.getGameInput(); 
         CodeBookshelf(userInput); 
     }
-    void CodeBookshelf(String u)
+    void CodeBookshelf(String u) throws InterruptedException
     {
         if(u == null)
         {
