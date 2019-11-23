@@ -19,7 +19,7 @@ public class Bookshelf {
     Painting painting = new Painting(); 
     String userInput = " "; 
     
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("You are standing in front of a bookshelf with 5 books on the shelves.\n"
                 + "You open each book and flip through the pages. In each book,\n"
@@ -30,7 +30,7 @@ public class Bookshelf {
         CodeOrPainting(userInput); 
     }
     
-    void CodeOrPainting(String u)
+    void CodeOrPainting(String u) throws InterruptedException
     {
         if(u == null)
         {

@@ -31,7 +31,7 @@ public class Room1 {
     //gets called from the main
     //explains the opening scenario for the user
     //takes in userinput and passes it to another function to decide where to send the user
-    void OpeningScenario()
+    void OpeningScenario() throws InterruptedException
     {
         //set the room1 scene for the user
         ui.printGameOutput("You wake up in a dark room, tied to a chair.\n"
@@ -52,7 +52,7 @@ public class Room1 {
     }
     //this function decides where to send the user, depending on if they chose
     //to MOVE or to WAIT
-    void MoveOrWait(String u)
+    void MoveOrWait(String u) throws InterruptedException
     {
         //handles the null pointer exception
          if(u == null)
@@ -93,7 +93,7 @@ public class Room1 {
         
         
     }
-    void FlowersORFall(String u)
+    void FlowersORFall(String u) throws InterruptedException
     {
         //handles the null pointer exception that is thrown when the user presses cancel
          if(u == null)

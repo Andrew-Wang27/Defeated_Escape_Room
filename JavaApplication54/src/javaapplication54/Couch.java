@@ -18,7 +18,7 @@ public class Couch {
     //create a desk object here
     UserInterface ui = new UserInterface();
     Desk desk = new Desk();
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         //unsure if we should hint to the user that there might be something 
         //under these cushions?? to get the matches. Not sure yet. 
@@ -28,7 +28,7 @@ public class Couch {
         ExploreORLeft(userInput);
         //looking for either EXPLORE (to move cushions and find matches) OR LEFT towards desk
     }
-    void ExploreORLeft(String u)
+    void ExploreORLeft(String u) throws InterruptedException
     {
         //handles exception thrown when user clicks cancel
         if(u == null)

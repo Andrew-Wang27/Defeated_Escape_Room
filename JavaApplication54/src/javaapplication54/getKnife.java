@@ -19,7 +19,7 @@ public class getKnife {
     static UserInterface ui = new UserInterface();
     String userInput; 
     Scanner keyboard = new Scanner(System.in);
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("You begin moving the chair..and OH NO!\n" +
         "The chair has snagged on a piece of rug and you toppled over\n" +
@@ -33,7 +33,7 @@ public class getKnife {
         String userInput = ui.getGameInput(); 
         ForwardORRight(userInput); 
     }
-    void ForwardORRight(String u)
+    void ForwardORRight(String u) throws InterruptedException
     {
         if(u == null)
         {

@@ -24,7 +24,7 @@ public class Phone {
      Timer timer = new Timer();
      UserInterface ui = new UserInterface();
      Scanner keyboard = new Scanner(System.in);
-     void printStatement()
+     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("you try the phone, but there are keys missing 57136\n" +
                             "What do you want to do?\n\n"); 
@@ -46,7 +46,7 @@ public class Phone {
         
     */
     
-    public void CodeBookshelfPainting(String u)
+    public void CodeBookshelfPainting(String u) throws InterruptedException
     {
         if(u == null)
         {

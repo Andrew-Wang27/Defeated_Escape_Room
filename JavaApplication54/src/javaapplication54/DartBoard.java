@@ -17,7 +17,7 @@ public class DartBoard {
      * asks for user input: CARDS or TABLE
      * passes user input to CardsOrTable method
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\nThe dartboard is hung on the wall with 8 darts scattered\n"
                 + "around the board. Half are at 10 points and the other half are on 2 points.\n"
@@ -31,7 +31,7 @@ public class DartBoard {
      * if user entered TABLE - table object and print statement called
      * @param u - userinput passed from print statement method
      */
-    void CardsOrTable(String u)
+    void CardsOrTable(String u) throws InterruptedException
     {
         if(u == null)
         {

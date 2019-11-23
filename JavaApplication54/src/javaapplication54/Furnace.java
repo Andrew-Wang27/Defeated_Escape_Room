@@ -19,7 +19,7 @@ public class Furnace {
      * printStatement describes the furnace, and what the user options are 
      * userInput is accepted and sent to method ToolboxOrCabinet.
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked towards the furnace. It is a very "
                 + "old and rusty furnace but you are able to read the model number."
@@ -36,7 +36,7 @@ public class Furnace {
      * 
      * @param u 
      */
-    void ToolBoxOrCabinet(String u)
+    void ToolBoxOrCabinet(String u) throws InterruptedException
     {
         if(userInput == null)
         {

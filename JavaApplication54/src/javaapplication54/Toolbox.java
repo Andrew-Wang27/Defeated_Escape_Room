@@ -18,7 +18,7 @@ public class Toolbox {
      * printStatement describes the toolbox, location in the room, and what the user options are 
      * userInput is accepted and sent to method CODE.
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked towards the workbench and examined the"
                 + " toolbox. The toolbox is locked! \n"
@@ -34,7 +34,7 @@ public class Toolbox {
      * @param u 
      */
     
-     void code(String u)
+     void code(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -61,7 +61,7 @@ public class Toolbox {
       * If the input is MOVE, the user can enter CABINET or FURNACE and this input is passed to the CabinetOrFurnace method 
       * of the table object. 
       */
-     void tryAgainOrMove()
+     void tryAgainOrMove() throws InterruptedException
      {
         userInput = ui.getGameInput(); 
         if(userInput == null)

@@ -19,7 +19,7 @@ public class Desk {
     Room1 room1 = new Room1(); 
     Phone phone = new Phone(); 
     
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\nWith your hands out in front of you, you find a desk.\n"
     + "The desk has multiple wires leading to a phone and a lamp.\n"
@@ -39,7 +39,7 @@ public class Desk {
     -end of print statement function*/
 
 
-    void PhoneORLamp(String u)
+    void PhoneORLamp(String u) throws InterruptedException
     {
         if(u == null)
         {

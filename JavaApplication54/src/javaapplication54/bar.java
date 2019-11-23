@@ -22,7 +22,7 @@ public class bar {
      * userInput is accepted and sent to method CODE.
      */
     
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked to a bar which has laptop with "
                 + "password.! \n"
@@ -38,7 +38,7 @@ public class bar {
      * @param u 
      */
 
-     void code(String u)
+     void code(String u) throws InterruptedException
     {
         //ui.printGameOutput("\nEnter the code: \n");
         //userInput = ui.getGameInput(); 
@@ -76,7 +76,7 @@ public class bar {
       * If the input is LITTLETABLE, the user is taken to the printstatement method of table3 class. 
       * of the table object. 
       */
-     void PoolTableOrLittleTable(String u)
+     void PoolTableOrLittleTable(String u) throws InterruptedException
      {
         if(u == null)
            {
@@ -105,7 +105,7 @@ public class bar {
       * If the input is DARTBOARD, the user is taken to the printstatement method of dartboard class. 
       * of the table object. 
       */
-      void CardsOrDartBoard(String u)
+      void CardsOrDartBoard(String u) throws InterruptedException
      {
         if(u == null)
            {
