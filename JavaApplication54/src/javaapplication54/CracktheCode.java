@@ -23,21 +23,21 @@ UserInterface ui = new UserInterface();
         userInput = ui.getPassword();
         if(userInput == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.WAIKA.name().equals(userInput))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "The drawer slides open and reveals the contents inside./\n"
                     + "A medical kit and key are inside."); 
-            ui.printGameOutput("enter CODE or BOOKSHELF or PAINTING\n");
+            
             rug.printStatement(); 
         }
         else 
         {
             ui.printGameOutput("\nWrong code! What would you like to do now?\n"); 
-            ui.printGameOutput("code CODE or BOOKSHELF or PAINTING");
-            userInput = ui.getGameInput(); 
+            
+            userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name(), keys.PAINTING.name()); 
             CodeBookshelfPainting(userInput); 
         }
         
@@ -48,7 +48,7 @@ UserInterface ui = new UserInterface();
     {
         if(u == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");
         }
        else if(keys.CODE.name().equalsIgnoreCase(u))
        {
@@ -68,7 +68,7 @@ UserInterface ui = new UserInterface();
         else
         {
             ui.printGameOutput("Sorry, we do not recognize that word\nWhat would you like to do?"); 
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name(), keys.PAINTING.name()); 
             CodeBookshelfPainting(userInput); 
         }
        
