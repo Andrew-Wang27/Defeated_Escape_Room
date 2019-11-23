@@ -23,8 +23,8 @@ public class Couch {
         //unsure if we should hint to the user that there might be something 
         //under these cushions?? to get the matches. Not sure yet. 
         ui.printGameOutput("What do you want to do?\n\n");
-        ui.printGameOutput("enter EXPLORE or LEFT\n");
-        userInput = ui.getGameInput(); 
+        
+        userInput = ui.getGameInput(keys.EXPLORE.name(), keys.LEFT.name()); 
         ExploreORLeft(userInput);
         //looking for either EXPLORE (to move cushions and find matches) OR LEFT towards desk
     }
@@ -33,7 +33,7 @@ public class Couch {
         //handles exception thrown when user clicks cancel
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.EXPLORE.name().equalsIgnoreCase(u))
         {
