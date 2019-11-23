@@ -17,7 +17,7 @@ public class Table {
      * printStatement describes the table, location in the room, and what the user options are 
      * userInput is accepted and sent to method UnderOrCandle
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou reach the small table. The table has a\n"
                 + "candle on it and a tablecloth across it, hiding what could\n"
@@ -32,7 +32,7 @@ public class Table {
      * If user enters CANDLE then describe the situation, ask for userINput, and send String to CabinetOrFurnace
      * @param u - userInput String passed from the printStatement
      */
-    void UnderOrCandle(String u)
+    void UnderOrCandle(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -66,7 +66,7 @@ public class Table {
      * depending on which choice the user made, an object is created from the respective class and the print statement is called
      * @param u - String userInput passed from UnderOrCandle. 
      */
-    void CabinetOrFurnace(String u)
+    void CabinetOrFurnace(String u) throws InterruptedException
     {
         if(u == null)
         {
