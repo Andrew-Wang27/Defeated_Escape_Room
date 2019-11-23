@@ -17,7 +17,7 @@ public class Flower {
     String userInput;
     //Scanner keyboard = new Scanner(System.in);
     //String keyWords[] = {"throw", "smell"}; 
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("The aroma of flowers has grown. You feel around and\n"
                 + "there are flowers in a glass vase.\n\n");
@@ -29,7 +29,7 @@ public class Flower {
         //room1.setUserInput(userInput); 
         ThrowOrSmell(userInput); 
     }
-    void ThrowOrSmell(String u)
+    void ThrowOrSmell(String u) throws InterruptedException
     {
         if(u == null)
         {
