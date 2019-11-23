@@ -17,7 +17,7 @@ public class Pooltable {
      * printStatement describes the pooltable to the user, the objects on it, and displays user options 
      * userInput is accepted and sent to method YesOrNo
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\nA magic 8-ball is laying in the middle of the table, among 8 other billiard balls.\n"
                 + "Do you want to try and ask it a question?\nEnter YES or NO\n"); 
@@ -30,7 +30,7 @@ public class Pooltable {
      * if user enters no, then they are prompted to enter either BAR or DARTBOARD
      * @param u - userinput passed from print Statement
      */
-    void YesOrNo(String u)
+    void YesOrNo(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -61,7 +61,7 @@ public class Pooltable {
      * the options are: BAR and DARTBOARD
      * BarOrDartBoard() method is called and accepts input
      */
-    void EightBall()
+    void EightBall() throws InterruptedException
     {
         String answer; 
         do{
@@ -113,7 +113,7 @@ public class Pooltable {
      * if user enters DartBoard - dartboard object and print statement called 
      * @param u 
      */
-    void BarOrDartBoardOrBall(String u)
+    void BarOrDartBoardOrBall(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -145,7 +145,7 @@ public class Pooltable {
      * asks to PLAY or pick up BALL
      * passes user input to PlayOrBall method
      */
-    void printStatement2()
+    void printStatement2() throws InterruptedException
     {
         ui.printGameOutput("\nDo you want to PLAY? Or do you want to pick up the 8-BALL?\n"); 
         userInput = ui.getGameInput(); 
@@ -157,7 +157,7 @@ public class Pooltable {
      * if user entered BALL - they are given the key
      * @param u - user input passed from printStatement2
      */
-    void PlayOrBall(String u)
+    void PlayOrBall(String u) throws InterruptedException
     {
         if(u == null)
         {
