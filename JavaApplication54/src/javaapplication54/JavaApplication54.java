@@ -17,7 +17,7 @@ public class JavaApplication54 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Room1 room1 = new Room1();
         Room2 room2 = new Room2(); 
         Room3 room3 = new Room3();
