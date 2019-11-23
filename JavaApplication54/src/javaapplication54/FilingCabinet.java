@@ -20,9 +20,8 @@ public class FilingCabinet {
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nThe filing cabinet is large with one drawer "
-                + "that does not appear to be locked.\n Would you like to open it?\n"
-                + "Enter YES or NO"); 
-        userInput = ui.getGameInput(); 
+                + "that does not appear to be locked.\n Would you like to open it?\n"); 
+        userInput = ui.getGameInput(keys.YES.name(), keys.NO.name()); 
         YesOrNo(userInput); 
     }
     
@@ -37,7 +36,7 @@ public class FilingCabinet {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
@@ -46,7 +45,7 @@ public class FilingCabinet {
         else if(keys.NO.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nDo you want to go to the FURNACE or stay at the CABINET?");
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.FURNACE.name(), keys.CABINET.name()); 
             Table table = new Table(); 
             table.CabinetOrFurnace(userInput);
         }
@@ -76,7 +75,7 @@ public class FilingCabinet {
             u = ui.getGameInput(); 
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(u.equals("18"))
         {
@@ -103,7 +102,7 @@ public class FilingCabinet {
         answer = ui.getGameInput(); 
         if(answer == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         }while(keys.YES.name().equalsIgnoreCase(answer));
         
@@ -121,7 +120,7 @@ public class FilingCabinet {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
@@ -141,7 +140,7 @@ public class FilingCabinet {
         {
             ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
             ui.printGameOutput("Would you like to go to the TOOLBOX, FURNACE or stay at the CABINET?"); 
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.FURNACE.name(), keys.TOOLBOX.name(), keys.CABINET.name()); 
             ToolBoxOrFurnaceOrCabinet(userInput);
         }
     }
