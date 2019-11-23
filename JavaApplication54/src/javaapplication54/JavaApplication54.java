@@ -26,7 +26,7 @@ public class JavaApplication54 {
         ui.setInterface();
         int userInput;
         Scanner keyboard = new Scanner(System.in); 
-        ui.printGameOutput("test output");
+       // ui.printGameOutput("test output");
         //welcoming message
         //System.out.println("Welcome!"); 
         ui.printGameOutput("Welcome to Escape Room!\n The rules are as follows:\n" +
