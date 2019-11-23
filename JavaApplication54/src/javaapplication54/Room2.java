@@ -19,7 +19,7 @@ public class Room2 {
      * opening scenario prints description of the second room
      * takes user input and sends it to the ToolboxOrTable method
      */
-    void OpeningScenario()
+    void OpeningScenario() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou climb down the trapdoor and are in a dimly lit room with small windows.\n"
                 + "Closest to you in the room are a table and a toolbox on a work bench.\n"
@@ -32,7 +32,7 @@ public class Room2 {
      * method determines where to send the user based on the input
      * @param u 
      */
-    void ToolboxOrTable(String u)
+    void ToolboxOrTable(String u) throws InterruptedException
     {
         if(u == null)
         {
