@@ -25,8 +25,8 @@ public class Furnace {
                 + "old and rusty furnace but you are able to read the model number."
                 + " The model number is: 46 AJD 0605"); 
         ui.printGameOutput("\nWhere do you want to go?");
-        ui.printGameOutput("\nEnter TOOLBOX or CABINET");
-        userInput = ui.getGameInput(); 
+        
+        userInput = ui.getGameInput(keys.TOOLBOX.name(), keys.CABINET.name()); 
         ToolBoxOrCabinet(userInput); 
     }
     /**
@@ -40,7 +40,7 @@ public class Furnace {
     {
         if(userInput == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(userInput))
         {
