@@ -16,7 +16,7 @@ UserInterface ui = new UserInterface();
     Rug rug = new Rug();
     String userInput = " "; 
     
-    void code()
+    void code() throws InterruptedException
     {
         //ui.printGameOutput("\nEnter the code: \n");
         //userInput = ui.getGameInput(); 
@@ -44,7 +44,7 @@ UserInterface ui = new UserInterface();
         
     }
     
-    void CodeBookshelfPainting(String u)
+    void CodeBookshelfPainting(String u) throws InterruptedException
     {
         if(u == null)
         {
