@@ -17,7 +17,7 @@ public class FilingCabinet {
      * printStatement describes the filing cabinet and what the user options are 
      * userInput is accepted and sent to method YesOrNo
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nThe filing cabinet is large with one drawer "
                 + "that does not appear to be locked.\n Would you like to open it?\n"
@@ -33,7 +33,7 @@ public class FilingCabinet {
      * Input under NO is passed to a method in the Table file called CabinetOrFurnace
      * @param u - userInput String passed from the printStatement
      */
-    void YesOrNo(String u)
+    void YesOrNo(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -63,7 +63,7 @@ public class FilingCabinet {
      * all options given 3 options: FURNACE, TOOLBOX, or CABINET
      * @param u - userInput String passed from YesOrNo method
      */
-    void File()
+    void File() throws InterruptedException
     {
         String u; 
         String answer; 
@@ -117,7 +117,7 @@ public class FilingCabinet {
      * if user enters CABINET - user prompted to enter another file number (user input sent to File method)
      * @param u - userinput from File method
      */
-    void ToolBoxOrFurnaceOrCabinet(String u)
+    void ToolBoxOrFurnaceOrCabinet(String u) throws InterruptedException
     {
         if(u == null)
         {
