@@ -23,7 +23,7 @@ public class DartBoard {
                 + "around the board. Half are at 10 points and the other half are on 2 points.\n"
                 + "Do you want to investigate the CARDS on the floor or\n"
                 + "the small TABLE with objects littered across it?\n"); 
-        userInput = ui.getGameInput();
+        userInput = ui.getGameInput(keys.CARDS.name(), keys.TABLE.name());
         CardsOrTable(userInput);
     }
     /**
@@ -35,7 +35,7 @@ public class DartBoard {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.CARDS.name().equalsIgnoreCase(u))
         {
