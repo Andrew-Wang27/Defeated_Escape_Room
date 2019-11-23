@@ -25,9 +25,9 @@ public class Cards {
                 + "randomly mixed on the floor. Each card has a letter.\n"
                 + "The letters include:\n"
                 + "H F R Y A S L U O L"); 
-        ui.printGameOutput("\nWhere do you want to go?\n"
-                + "Enter BAR or LITTLETABLE\n");
-        userInput = ui.getGameInput(); 
+        ui.printGameOutput("\nWhere do you want to go?\n");
+                
+        userInput = ui.getGameInput(keys.BAR.name(), keys.LITTLETABLE.name()); 
         barOrLittleTable(userInput); 
     }
 
@@ -43,7 +43,7 @@ public class Cards {
         
         if(u == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
