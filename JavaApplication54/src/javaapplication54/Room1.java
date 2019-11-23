@@ -42,9 +42,9 @@ public class Room1 {
         
         //ask the user what they want to do
         //the answers we are looking for: either move or wait
-        ui.printGameOutput("Enter MOVE or WAIT\n");
+        
         ui.printGameOutput("What do you want to do?\n\n"); //expand later to describe number value
-        userInput = ui.getGameInput();
+        userInput = ui.getGameInput(keys.MOVE.name(), keys.WAIT.name());
          
         //call the move or wait function to find out what the user typed in
         MoveOrWait(userInput);
@@ -57,15 +57,15 @@ public class Room1 {
         //handles the null pointer exception
          if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         //if the user entered move, then prompt the user 
          else if(keys.MOVE.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("You have decided to move! In which direction would you like to move?\n\n");
             //the answer we are looking for here is left or right
-            ui.printGameOutput("Enter LEFT or RIGHT\n");
-            userInput = ui.getGameInput();  
+            
+            userInput = ui.getGameInput(keys.LEFT.name(), keys.RIGHT.name());  
             //call the flowers or fall function. 
             //pass the userinput 
             FlowersORFall(userInput); 
@@ -75,14 +75,9 @@ public class Room1 {
             //if the user entered WAIT, then they eat up 10 minutes from the clock
             ui.printGameOutput("You have decidedd to wait!\n"); 
             ui.printGameOutput("10 minutes has been docked from the timer!\n");
-            //display timer here?????
+           
             OpeningScenario(); //call the opening scenario again, until user enters MOVE
         }
-        /*else if(u.equalsIgnoreCase(keyWords[7]))
-        {
-            //call timer class and function to display the time
-            //call the opening scenario again 
-        }*/
         else
         {
             //else = a word we dont recognize or a word that will not get the 
@@ -98,7 +93,7 @@ public class Room1 {
         //handles the null pointer exception that is thrown when the user presses cancel
          if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         //if user types right
          else if(keys.RIGHT.name().equalsIgnoreCase(u))
@@ -121,7 +116,7 @@ public class Room1 {
         {
             ui.printGameOutput("Sorry, we do not recognize that word\n");
             ui.printGameOutput("Which direction would you like to move?");
-            userInput = ui.getGameInput();
+            userInput = ui.getGameInput(keys.RIGHT.name(), keys.LEFT.name());
             FlowersORFall(userInput);
         }
        
