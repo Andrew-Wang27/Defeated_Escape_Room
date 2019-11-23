@@ -11,9 +11,11 @@ package javaapplication54;
  */
 public class Rug {
     UserInterface ui = new UserInterface(); 
+    Room2 room2 = new Room2(); 
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("Further exploring the room, you trip over a rug and find a trap door."
                 + "\nYou use the key and you are free!");
+        room2.OpeningScenario();
     }
 }
