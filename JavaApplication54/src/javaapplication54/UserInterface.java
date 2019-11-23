@@ -5,6 +5,7 @@
  */
 package javaapplication54;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -43,6 +44,8 @@ public class UserInterface extends JFrame{
         frame.add( new JLabel(GAME_TEXT ), BorderLayout.NORTH );
 
         gameText = new JTextArea();
+        gameText.setBackground(Color.black);
+        gameText.setForeground(Color.white);
         gameText.setLineWrap(true);
         gameText.setWrapStyleWord(true);
 
@@ -85,7 +88,7 @@ public class UserInterface extends JFrame{
             String s = String.valueOf(c);
             gameText.append(s);
             gameText.setCaretPosition(gameText.getDocument().getLength());
-            Thread.sleep(40);
+            Thread.sleep(10);
 
         }
         //the following text was added to automatically focus on the most recent line added on the frame - Gab
