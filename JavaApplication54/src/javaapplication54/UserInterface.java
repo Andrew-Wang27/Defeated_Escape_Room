@@ -101,9 +101,29 @@ public class UserInterface extends JFrame{
         String input = JOptionPane.showInputDialog(frame, output);
         return input;
     }
+     //method below not used anymore
     static String getGameInput() {
         String input = JOptionPane.showInputDialog(frame, DEFAULT_PROMPT);
         return input;
+    }
+    /**
+     * accepts String of key words and displays them in the input dialog box
+     * returns input String to method that called it for comparison to other key words 
+     * @param x - first String
+     * @param y - second String 
+     * @return input - to be compared to key words 
+     * @throws InterruptedException 
+     */
+    static String getGameInput(String x, String y)throws InterruptedException {
+        String input = JOptionPane.showInputDialog(frame, "Enter " + x + " or " + y);
+        printGameOutput("\nYou entered: " + input + "\n"); 
+        return input; 
+    }
+    
+    static String getGameInput(String x, String y, String z)throws InterruptedException {
+        String input = JOptionPane.showInputDialog(frame, "Enter " + x + " or " + y + " or " + z);
+        printGameOutput("\nYou entered: " + input + "\n"); 
+        return input; 
     }
     /*
     static String getGameInput2() {
