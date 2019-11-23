@@ -23,8 +23,8 @@ public class Room2 {
     {
         ui.printGameOutput("\n\nYou climb down the trapdoor and are in a dimly lit room with small windows.\n"
                 + "Closest to you in the room are a table and a toolbox on a work bench.\n"
-                + "Where would you like to go first?\n\nEnter TOOLBOX or TABLE"); 
-        userInput = ui.getGameInput(); 
+                + "Where would you like to go first?\n"); 
+        userInput = ui.getGameInput(keys.TOOLBOX.name(), keys.TABLE.name()); 
         ToolboxOrTable(userInput);      
     }
     
@@ -36,7 +36,7 @@ public class Room2 {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.TABLE.name().equalsIgnoreCase(u))
         {
