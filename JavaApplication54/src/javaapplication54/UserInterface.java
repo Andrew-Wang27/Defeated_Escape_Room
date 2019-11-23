@@ -84,6 +84,7 @@ public class UserInterface extends JFrame{
             char c = printString.charAt(i);
             String s = String.valueOf(c);
             gameText.append(s);
+            gameText.setCaretPosition(gameText.getDocument().getLength());
             Thread.sleep(40);
 
         }
