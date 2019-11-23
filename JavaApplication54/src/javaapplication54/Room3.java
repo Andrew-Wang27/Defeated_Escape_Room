@@ -18,7 +18,7 @@ public class Room3 {
      * Called by the main after room 1 and 2 are completed by the user
      * takes user input and sends it to the ToolboxOrTable method
      */
-    void OpeningScenario()
+    void OpeningScenario() throws InterruptedException
     {
         ui.printGameOutput("\n\nCongrats! You have made it to Room 3\n"
                 + "You are one step closer to escaping.\n\n"
@@ -37,7 +37,7 @@ public class Room3 {
      * input validation implemented
      * @param u - userinput passed from Opening Scenario method
      */
-    void PoolTableOrBar(String u)
+    void PoolTableOrBar(String u) throws InterruptedException
     {
         if(u == null)
         {
