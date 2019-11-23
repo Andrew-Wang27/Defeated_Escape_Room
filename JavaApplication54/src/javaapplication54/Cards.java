@@ -19,7 +19,7 @@ public class Cards {
      * printStatement describes the bar with a laptop, and what the user options are 
      * userInput is accepted and sent to method CODE.
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked over by the cards. The cards are"
                 + "randomly mixed on the floor. Each card has a letter.\n"
@@ -38,7 +38,7 @@ public class Cards {
      * @param u 
      */
 
-     void barOrLittleTable(String u)
+     void barOrLittleTable(String u) throws InterruptedException
     {
         
         if(u == null)
