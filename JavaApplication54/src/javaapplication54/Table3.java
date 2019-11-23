@@ -17,7 +17,7 @@ public class Table3 {
      * asks if they want to investigate NECKLACE or NOTE
      * passes userinput to NecklaceOrNote method
      */
-    void printStatement()
+    void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\nThe small table is littered with objects.\n"
                 + "A whiskey glass is on the table, along with 2 poker chips,\n"
@@ -32,7 +32,7 @@ public class Table3 {
      * input passed to PooltableOrCardsOrTable method
      * @param u - userinput passed from print statement method
      */
-    void NecklaceOrNote(String u)
+    void NecklaceOrNote(String u) throws InterruptedException
     {
         if(u == null)
         {
@@ -61,7 +61,7 @@ public class Table3 {
      * if user entered TABLE - print statement called
      * @param u - userinput passed from NecklaceOrNote method
      */
-    void PooltableOrCardsOrTable(String u)
+    void PooltableOrCardsOrTable(String u) throws InterruptedException
     {
         if(u == null)
         {
