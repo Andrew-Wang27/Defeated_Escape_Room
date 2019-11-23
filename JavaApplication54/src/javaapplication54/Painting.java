@@ -19,15 +19,15 @@ public class Painting {
         ui.printGameOutput("The painting is of Toto and Dorothy from the Wizard of Oz\n"
                 + "walking down the yellow brick road. There is a quote written\n"
                 + "at the bottom: We Aren't In Kansas Anymore\nWhat do you want to do now?"); 
-        ui.printGameOutput("\nEnter CODE or BOOKSHELF\n");
-        userInput = ui.getGameInput(); 
+        
+        userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name()); 
         CodeBookshelf(userInput); 
     }
     void CodeBookshelf(String u) throws InterruptedException
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         
         else if(keys.CODE.name().equalsIgnoreCase(u))
