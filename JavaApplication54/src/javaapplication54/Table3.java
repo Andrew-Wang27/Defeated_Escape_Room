@@ -22,7 +22,7 @@ public class Table3 {
         ui.printGameOutput("\nThe small table is littered with objects.\n"
                 + "A whiskey glass is on the table, along with 2 poker chips,\n"
                 + "a note, and a necklace.\nDo you want to investigate the NECKLACE or NOTE?\n"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.NECKLACE.name(), keys.NOTE.name()); 
         NecklaceOrNote(userInput); 
     }
     /**
@@ -36,7 +36,7 @@ public class Table3 {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.NECKLACE.name().equalsIgnoreCase(u))
         {
@@ -52,7 +52,7 @@ public class Table3 {
             printStatement();  
         }
         ui.printGameOutput("\nDo you want to move to the POOLTABLE or CARDS or remain at the TABLE?\n"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.POOLTABLE.name(),keys.CARDS.name(), keys.TABLE.name()); 
         PooltableOrCardsOrTable(userInput); 
     }
     /**
@@ -65,7 +65,7 @@ public class Table3 {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.CARDS.name().equalsIgnoreCase(u))
         {

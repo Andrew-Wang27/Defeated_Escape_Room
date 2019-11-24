@@ -29,15 +29,15 @@ public class getKnife {
         "You keep the knife in your pocket.\n\n");
         ui.printGameOutput("In which direction would you like to go?\n\n"); 
         //forward or right is what we are looking for here
-        ui.printGameOutput("Enter FORWARD or RIGHT\n");
-        String userInput = ui.getGameInput(); 
+        
+        String userInput = ui.getGameInput(keys.FORWARD.name(), keys.RIGHT.name()); 
         ForwardORRight(userInput); 
     }
     void ForwardORRight(String u) throws InterruptedException
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         //if forward
          if(keys.FORWARD.name().equalsIgnoreCase(u))

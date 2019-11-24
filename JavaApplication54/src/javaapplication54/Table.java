@@ -23,7 +23,7 @@ public class Table {
                 + "candle on it and a tablecloth across it, hiding what could\n"
                 + "be underneath. Would you like to look UNDER the table or\n"
                 + "light the CANDLE"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.UNDER.name(), keys.CANDLE.name()); 
         UnderOrCandle(userInput); 
     }
     /**
@@ -36,14 +36,14 @@ public class Table {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.UNDER.name().equalsIgnoreCase(u))
         {
             
             ui.printGameOutput("\n\nNothing is there. Closest to you now are the\n"
                     + "filing CABINET and the FURNACE. Where do you want to go?");
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.CABINET.name(), keys.FURNACE.name()); 
             CabinetOrFurnace(userInput); 
         }
         else if(keys.CANDLE.name().equalsIgnoreCase(u))
@@ -51,7 +51,7 @@ public class Table {
             ui.printGameOutput("\n\nYou light the candle, but the room was already lit.\n"
                     + "Closest to you now are thefiling CABINET and the FURNACE.\n"
                     + "Where do you want to go?");
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.CABINET.name(), keys.FURNACE.name()); 
             CabinetOrFurnace(userInput); 
         }
         else
@@ -70,7 +70,7 @@ public class Table {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.CABINET.name().equalsIgnoreCase(u))
         {
@@ -84,8 +84,8 @@ public class Table {
         }
         else
         {
-            ui.printGameOutput("\nSorry, we do not recognize that word\n Enter: CABINET or FURNACE"); 
-            userInput = ui.getGameInput(); 
+            ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
+            userInput = ui.getGameInput(keys.CABINET.name(), keys.FURNACE.name()); 
             CabinetOrFurnace(userInput); 
         }
     }

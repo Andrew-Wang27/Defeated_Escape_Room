@@ -45,7 +45,7 @@ public class bar {
         //userInput = ui.getPassword();
         if(userInput == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.ROYALFLUSH.name().equalsIgnoreCase(userInput))
         {
@@ -53,8 +53,8 @@ public class bar {
                     + "You unlocked the laptop which shows an article about "
                     + "a necklace."); 
             ui.printGameOutput("\nWhere do you want to go?");
-            ui.printGameOutput("\nEnter POOLTABLE or LITTLETABLE");
-            userInput = ui.getGameInput();
+            
+            userInput = ui.getGameInput(keys.POOLTABLE.name(), keys.LITTLETABLE.name());
             PoolTableOrLittleTable(userInput);
 
         }
@@ -62,8 +62,8 @@ public class bar {
         {
             ui.printGameOutput("\nWrong code! You are locked out!\n"
                     + "What would you like to do now?\n"); 
-            ui.printGameOutput("Enter CARDS or DARTBOARD");
-            userInput = ui.getGameInput();
+            
+            userInput = ui.getGameInput(keys.CARDS.name(), keys.DARTBOARD.name());
             CardsOrDartBoard(userInput);
 
 
@@ -80,7 +80,7 @@ public class bar {
      {
         if(u == null)
            {
-               System.exit(0);
+               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
            }
            else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
            {
@@ -93,8 +93,8 @@ public class bar {
            else
            {
                ui.printGameOutput("\nPlease enter a choice");
-               ui.printGameOutput("\nEnter POOLTABLE or LITTLETABLE");
-               u = ui.getGameInput();
+               
+               u = ui.getGameInput(keys.POOLTABLE.name(), keys.LITTLETABLE.name());
                PoolTableOrLittleTable(u);
 
            }
@@ -109,7 +109,7 @@ public class bar {
      {
         if(u == null)
            {
-               System.exit(0);
+               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
            }
            else if(keys.CARDS.name().equalsIgnoreCase(u))
            {
@@ -123,8 +123,8 @@ public class bar {
            else
            {
                ui.printGameOutput("\nPlease enter a choice");
-               ui.printGameOutput("\nEnter CARDS or DARTBOARD");
-               u = ui.getGameInput();
+               
+               u = ui.getGameInput(keys.CARDS.name(), keys.DARTBOARD.name());
                CardsOrDartBoard(u);
 
            }

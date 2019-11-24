@@ -20,8 +20,8 @@ public class Pooltable {
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\nA magic 8-ball is laying in the middle of the table, among 8 other billiard balls.\n"
-                + "Do you want to try and ask it a question?\nEnter YES or NO\n"); 
-        userInput = ui.getGameInput(); 
+                + "Do you want to try and ask it a question?\n"); 
+        userInput = ui.getGameInput(keys.YES.name(), keys.NO.name()); 
         YesOrNo(userInput); 
     }
     /**
@@ -34,7 +34,7 @@ public class Pooltable {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
@@ -44,7 +44,7 @@ public class Pooltable {
         {
             ui.printGameOutput("\nDo you want to go to the BAR or DARTBOARD?\n"
                     + "Or have you just thought of a question to ask the magic BALL?"); 
-            userInput = ui.getGameInput(); 
+            userInput = ui.getGameInput(keys.BAR.name(), keys.DARTBOARD.name(), keys.BALL.name()); 
             BarOrDartBoardOrBall(userInput);  
         }
         else
@@ -73,7 +73,7 @@ public class Pooltable {
         
             if(u == null)
             {
-                System.exit(0); 
+                ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
             }
             else if(u.toLowerCase().contains("dartboard") == true)
             {
@@ -98,13 +98,13 @@ public class Pooltable {
             {
                 ui.printGameOutput("\nIncorrect input.\n"); 
                 ui.printGameOutput("\nEnter: YES to ask another question or QUIT to exit the 8-ball\n"); 
-                answer = ui.getGameInput();  
+                answer = ui.getGameInput(keys.YES.name(), keys.QUIT.name());  
             }
         }while(keys.YES.name().equalsIgnoreCase(answer));
         
         ui.printGameOutput("\nWhat do you want to do now? Go investigate the BAR, DARTBOARD\n"
                 + ", or have you thought of another question for the magic BALL?\n"); 
-        userInput = ui.getGameInput();
+        userInput = ui.getGameInput(keys.BAR.name(), keys.DARTBOARD.name(), keys.BALL.name());
         BarOrDartBoardOrBall(userInput); 
     }
     /**
@@ -117,7 +117,7 @@ public class Pooltable {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
@@ -136,7 +136,7 @@ public class Pooltable {
         else
         {
             ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
-            userInput = ui.getGameInput();
+            userInput = ui.getGameInput(keys.BAR.name(), keys.DARTBOARD.name(), keys.BALL.name());
             BarOrDartBoardOrBall(userInput); 
         }
     }
@@ -148,7 +148,7 @@ public class Pooltable {
     void printStatement2() throws InterruptedException
     {
         ui.printGameOutput("\nDo you want to PLAY? Or do you want to pick up the 8-BALL?\n"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.PLAY.name(), keys.BALL.name()); 
         PlayOrBall(userInput); 
     }
     /**
@@ -161,7 +161,7 @@ public class Pooltable {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
         }
         else if(keys.PLAY.name().equalsIgnoreCase(u))
         {

@@ -22,9 +22,9 @@ public class Flower {
         ui.printGameOutput("The aroma of flowers has grown. You feel around and\n"
                 + "there are flowers in a glass vase.\n\n");
         ui.printGameOutput("What do you want to do with the flowers in the glass vase?\n\n"); 
-        ui.printGameOutput("Enter THROW or SMELL\n");
+        
         //looking for answers: THROW OR SMELL
-        userInput = ui.getGameInput();
+        userInput = ui.getGameInput(keys.THROW.name(), keys.SMELL.name());
         
         //room1.setUserInput(userInput); 
         ThrowOrSmell(userInput); 
@@ -33,7 +33,7 @@ public class Flower {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.THROW.name().equalsIgnoreCase(u))
         {
@@ -46,8 +46,8 @@ public class Flower {
         {
             ui.printGameOutput("The flowers smell beautiful\n");
             ui.printGameOutput("Now what do you want to do?\n\n");
-            ui.printGameOutput("Enter THROW or SMELL\n");
-            userInput = ui.getGameInput(); 
+            
+            userInput = ui.getGameInput(keys.THROW.name(), keys.SMELL.name()); 
             ThrowOrSmell(userInput);
             
         }

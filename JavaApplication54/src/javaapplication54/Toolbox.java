@@ -12,6 +12,7 @@ package javaapplication54;
 public class Toolbox {
     UserInterface ui = new UserInterface(); 
     Table table = new Table();
+    Room3 room3 = new Room3();
     String userInput = ""; 
     
     /**
@@ -38,17 +39,18 @@ public class Toolbox {
     {
         if(u == null)
         {
-            System.exit(0);
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(u.equals("1002"))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "You opened the toolbox and acquired the key"); 
+            room3.OpeningScenario();
         }
         else 
         {
             ui.printGameOutput("\nWrong code! What would you like to do now?\n"); 
-            ui.printGameOutput("Enter TRYAGAIN or MOVE");
+            
             tryAgainOrMove();
             
             
@@ -63,10 +65,10 @@ public class Toolbox {
       */
      void tryAgainOrMove() throws InterruptedException
      {
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.TRYAGAIN.name(), keys.MOVE.name()); 
         if(userInput == null)
            {
-               System.exit(0);
+               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
            }
            else if(keys.TRYAGAIN.name().equalsIgnoreCase(userInput))
            {
@@ -75,14 +77,14 @@ public class Toolbox {
            else if(keys.MOVE.name().equalsIgnoreCase(userInput))
            {
                ui.printGameOutput("\nWhere do you want to go?");
-               ui.printGameOutput("\nEnter CABINET or FURNACE");
-               userInput = ui.getGameInput();
+               
+               userInput = ui.getGameInput(keys.CABINET.name(), keys.FURNACE.name());
                table.CabinetOrFurnace(userInput);
            }
            else
            {
                ui.printGameOutput("\nPlease enter a choice");
-               ui.printGameOutput("\nEnter TRYAGAIN or MOVE");
+               
                tryAgainOrMove();
 
            }

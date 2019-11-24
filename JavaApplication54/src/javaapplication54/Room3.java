@@ -25,7 +25,7 @@ public class Room3 {
                 + "This room is brightly lit, with objects and furniture littering the room.\n"
                 + "There is a POOLTABLE across the room and a BAR to your left with a computer on it.\n"
                 + "Where do you want to go?"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.POOLTABLE.name(), keys.BAR.name()); 
         PoolTableOrBar(userInput);      
     }
     
@@ -41,7 +41,7 @@ public class Room3 {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
         {

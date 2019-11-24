@@ -28,9 +28,8 @@ public class Phone {
     {
         ui.printGameOutput("you try the phone, but there are keys missing 57136\n" +
                             "What do you want to do?\n\n"); 
-        //looking for answers: THROW OR SMELL
-        ui.printGameOutput("Enter CODE or BOOKSHELF or PAINTING\n");
-        String userInput = ui.getGameInput();
+        
+        String userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name(), keys.PAINTING.name());
         CodeBookshelfPainting(userInput);
          
          
@@ -50,7 +49,7 @@ public class Phone {
     {
         if(u == null)
         {
-            System.exit(0); 
+            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
         }
         else if(keys.CODE.name().equalsIgnoreCase(u))
         {
