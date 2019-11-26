@@ -35,7 +35,7 @@ public class DartBoard {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
         }
         else if(keys.CARDS.name().equalsIgnoreCase(u))
         {
