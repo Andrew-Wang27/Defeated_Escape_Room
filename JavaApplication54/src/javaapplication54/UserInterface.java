@@ -18,6 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import javax.swing.UIManager;
 /**
  *
  * @author Gab
@@ -115,12 +116,16 @@ public class UserInterface extends JFrame{
      * @throws InterruptedException 
      */
     static String getGameInput(String x, String y)throws InterruptedException {
+        UIManager.put("OptionPane.okButtonText", "Enter"); 
+        UIManager.put("OptionPane.cancelButtonText", "Quit");
         String input = JOptionPane.showInputDialog(frame, "Enter " + x + " or " + y);
         printGameOutput("\nYou entered: " + input + "\n"); 
         return input; 
     }
     
     static String getGameInput(String x, String y, String z)throws InterruptedException {
+        UIManager.put("OptionPane.okButtonText", "Enter"); 
+        UIManager.put("OptionPane.cancelButtonText", "Quit");
         String input = JOptionPane.showInputDialog(frame, "Enter " + x + " or " + y + " or " + z);
         printGameOutput("\nYou entered: " + input + "\n"); 
         return input; 
