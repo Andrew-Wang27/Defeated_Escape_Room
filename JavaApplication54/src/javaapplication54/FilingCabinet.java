@@ -36,7 +36,7 @@ public class FilingCabinet {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
@@ -75,7 +75,7 @@ public class FilingCabinet {
             u = ui.getGameInput(); 
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
         }
         else if(u.equals("18"))
         {
@@ -102,7 +102,7 @@ public class FilingCabinet {
         answer = ui.getGameInput(); 
         if(answer == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
         }
         }while(keys.YES.name().equalsIgnoreCase(answer));
         
@@ -120,7 +120,7 @@ public class FilingCabinet {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
