@@ -57,7 +57,7 @@ public class Room1 {
         //handles the null pointer exception
          if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         //if the user entered move, then prompt the user 
          else if(keys.MOVE.name().equalsIgnoreCase(u))
@@ -93,7 +93,7 @@ public class Room1 {
         //handles the null pointer exception that is thrown when the user presses cancel
          if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
         }
         //if user types right
          else if(keys.RIGHT.name().equalsIgnoreCase(u))

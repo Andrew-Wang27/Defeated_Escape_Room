@@ -45,7 +45,7 @@ public class bar {
         //userInput = ui.getPassword();
         if(userInput == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         else if(keys.ROYALFLUSH.name().equalsIgnoreCase(userInput))
         {
@@ -80,7 +80,7 @@ public class bar {
      {
         if(u == null)
            {
-               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+               ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
            }
            else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
            {
@@ -109,7 +109,7 @@ public class bar {
      {
         if(u == null)
            {
-               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+               ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
            }
            else if(keys.CARDS.name().equalsIgnoreCase(u))
            {

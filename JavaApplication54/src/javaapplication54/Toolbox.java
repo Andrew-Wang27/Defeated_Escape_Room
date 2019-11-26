@@ -39,7 +39,7 @@ public class Toolbox {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         else if(u.equals("1002"))
         {
@@ -68,7 +68,7 @@ public class Toolbox {
         userInput = ui.getGameInput(keys.TRYAGAIN.name(), keys.MOVE.name()); 
         if(userInput == null)
            {
-               ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+               ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
            }
            else if(keys.TRYAGAIN.name().equalsIgnoreCase(userInput))
            {
