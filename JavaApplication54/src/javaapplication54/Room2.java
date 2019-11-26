@@ -36,7 +36,7 @@ public class Room2 {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking CANCEL!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
         else if(keys.TABLE.name().equalsIgnoreCase(u))
         {
