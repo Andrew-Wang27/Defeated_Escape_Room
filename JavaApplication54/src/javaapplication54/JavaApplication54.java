@@ -21,6 +21,7 @@ public class JavaApplication54 {
         Room1 room1 = new Room1();
         Room2 room2 = new Room2(); 
         Room3 room3 = new Room3();
+        Maze maze = new Maze();
         UserInterface ui = new UserInterface(); 
         //get user input
         ui.setInterface();
@@ -38,11 +39,12 @@ public class JavaApplication54 {
         
         
         //open room 1
-        room1.OpeningScenario();
+        //room1.OpeningScenario();
         //after room1 finishes, user moves to room2
         //room2.OpeningScenario(); 
         //after user complete room1 and room2, user moves to room3
-        //room3.OpeningScenario(); 
+        //room3.OpeningScenario();
+        maze.OpeningScenario();
     }
     
  }
