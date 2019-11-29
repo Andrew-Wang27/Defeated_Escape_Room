@@ -39,12 +39,12 @@ public class JavaApplication54 {
         
         
         //open room 1
-        //room1.OpeningScenario();
+        room1.OpeningScenario();
         //after room1 finishes, user moves to room2
         //room2.OpeningScenario(); 
         //after user complete room1 and room2, user moves to room3
         //room3.OpeningScenario();
-        maze.OpeningScenario();
+        
     }
     
  }
