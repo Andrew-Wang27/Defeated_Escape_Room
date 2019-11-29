@@ -47,7 +47,7 @@ public class bar {
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
-        else if(keys.ROYALFLUSH.name().equalsIgnoreCase(userInput))
+        else if(keys.BLACKJACK.name().equalsIgnoreCase(userInput))
         {
             ui.printGameOutput("\nCongrats! You got the code right!\n"
                     + "You unlocked the laptop which shows an article about "
