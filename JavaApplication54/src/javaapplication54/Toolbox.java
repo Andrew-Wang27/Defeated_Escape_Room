@@ -41,7 +41,7 @@ public class Toolbox {
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
-        else if(u.equals("1002"))
+        else if(keys.MIT.name().equals(u))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "You opened the toolbox and acquired the key"); 
