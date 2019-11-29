@@ -173,6 +173,8 @@ public class Pooltable {
             ui.printGameOutput("\nThere is a small clanking noise as you lift the 8-ball!\n"
                     + "You throw it on the floor and the ball shatters, leaving a small\n"
                     + "key in its wake. You can unlock the door!\n");  
+            Maze maze = new Maze(); 
+            maze.OpeningScenario();
         }
         else
         {
