@@ -79,7 +79,7 @@ public class FilingCabinet {
         }
         else if(u.equals("18"))
         {
-            ui.printGameOutput("\nThe file says: 1002 Park Ave, Florham Park, NJ\n");
+            ui.printGameOutput("\nThe file says: MIT, 77 Massachusetts Ave, Cambridge, MA 02139\n");
         }
         else if(u.equals("4") || u.equals("20") || u.equals("11")|| u.equals("8") || u.equals("15") || u.equals("10")|| u.equals("17"))
         {
@@ -107,7 +107,7 @@ public class FilingCabinet {
         }while(keys.YES.name().equalsIgnoreCase(answer));
         
         ui.printGameOutput("\nWould you like to go to the TOOLBOX, FURNACE, or stay at the CABINET?"); 
-        userInput = ui.getGameInput(); 
+        userInput = ui.getGameInput(keys.TOOLBOX.name(), keys.FURNACE.name(), keys.CABINET.name()); 
         ToolBoxOrFurnaceOrCabinet(userInput); 
     }
     /**
