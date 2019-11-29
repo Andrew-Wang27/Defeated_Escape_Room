@@ -537,7 +537,9 @@ public class Maze {
         else if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
            //win
-            ui.printGameOutput("You are freeeeeeeeee!!!!!!!");
+            ui.printGameOutput("You have reached the end of the maze! Unlock\n"
+                    + "the gate to get out.");
+            code(); 
         }
         else
         {
@@ -545,6 +547,29 @@ public class Maze {
             OpeningScenario(); 
         }
     }
-       
+    /**
+     * method gets the password entered by the user
+     * if their code contains the three password of the previous rooms, then they are free
+     * @throws InterruptedException 
+     */
+    void code() throws InterruptedException
+    {
+        userInput = ui.getPassword(); 
+        if(userInput == null)
+        {
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+        }
+        else if(userInput.contains(keys.MIT.name()) && userInput.contains(keys.BLACKJACK.name()) && userInput.contains(keys.TEAM.name()))
+        {
+            ui.printGameOutput("\nYou have escaped! The Defeated thanks you for playing!"); 
+        }
+        else
+        {
+            ui.printGameOutput("\nWrong code! Hint: this password has been growing\n"
+                    + "each time you escpaed a room!\n"); 
+            code(); 
+        }
+        
+    }
        
 }
