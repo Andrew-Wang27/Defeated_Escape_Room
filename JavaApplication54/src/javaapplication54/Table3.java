@@ -41,19 +41,23 @@ public class Table3 {
         else if(keys.NECKLACE.name().equalsIgnoreCase(u))
         {
            ui.printGameOutput("\nThe necklace has 8 large diamonds on it.\n");
+           ui.printGameOutput("\nDo you want to move to the POOLTABLE or CARDS or remain at the TABLE?\n"); 
+            userInput = ui.getGameInput(keys.POOLTABLE.name(),keys.CARDS.name(), keys.TABLE.name()); 
+            PooltableOrCardsOrTable(userInput); 
         }
         else if(keys.NOTE.name().equalsIgnoreCase(u))
         {
-            ui.printGameOutput("\nThe note says: went for a swim\n"); 
+            ui.printGameOutput("\nThe note says: Winner, Winner, Chicken Dinner\n"); 
+            ui.printGameOutput("\nDo you want to move to the POOLTABLE or CARDS or remain at the TABLE?\n"); 
+            userInput = ui.getGameInput(keys.POOLTABLE.name(),keys.CARDS.name(), keys.TABLE.name()); 
+            PooltableOrCardsOrTable(userInput); 
         }
         else
         {
             ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
             printStatement();  
         }
-        ui.printGameOutput("\nDo you want to move to the POOLTABLE or CARDS or remain at the TABLE?\n"); 
-        userInput = ui.getGameInput(keys.POOLTABLE.name(),keys.CARDS.name(), keys.TABLE.name()); 
-        PooltableOrCardsOrTable(userInput); 
+        
     }
     /**
      * if user entered CARDS - cards object and print statement called (commented out as Cards file has not been made yet)
