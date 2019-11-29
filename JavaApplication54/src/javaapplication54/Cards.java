@@ -22,9 +22,9 @@ public class Cards {
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked over by the cards. The cards are"
-                + "randomly mixed on the floor. Each card has a letter.\n"
-                + "The letters include:\n"
-                + "H F R Y A S L U O L"); 
+                + "randomly mixed on the floor. Each card has a number.\n"
+                + "The numbers include:\n"
+                + "2 4 8 2 5"); 
         ui.printGameOutput("\nWhere do you want to go?\n");
                 
         userInput = ui.getGameInput(keys.BAR.name(), keys.LITTLETABLE.name()); 
