@@ -21,9 +21,9 @@ public class Bookshelf {
     
     void printStatement() throws InterruptedException
     {
-        ui.printGameOutput("You are standing in front of a bookshelf with 5 books on the shelves.\n"
+        ui.printGameOutput("You are standing in front of a bookshelf with 4 books on the shelves.\n"
                 + "You open each book and flip through the pages. In each book,\n"
-                + "there is a note with a letter on it. The letters are: KIAAW\n\n"
+                + "there is a note with a letter on it. The letters are: M E A T\n\n"
                 + "What do you want to do now?");
         
         userInput = ui.getGameInput(keys.CODE.name(), keys.PAINTING.name()); 
