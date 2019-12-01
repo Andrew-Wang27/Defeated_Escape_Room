@@ -19,8 +19,9 @@ public class DartBoard {
      */
     void printStatement() throws InterruptedException
     {
-        ui.printGameOutput("\nThe dartboard is hung on the wall with 8 darts scattered\n"
-                + "around the board. Half are at 10 points and the other half are on 2 points.\n"
+        ui.printGameOutput("\nThe dartboard is hung on the wall with 4 darts scattered\n"
+                + "around the board. One dart is at 9 points, the second is at 1 point, \n"
+                + "the third is at 5 points, and the fourth is at 6 points.\n"
                 + "Do you want to investigate the CARDS on the floor or\n"
                 + "the small TABLE with objects littered across it?\n"); 
         userInput = ui.getGameInput(keys.CARDS.name(), keys.TABLE.name());

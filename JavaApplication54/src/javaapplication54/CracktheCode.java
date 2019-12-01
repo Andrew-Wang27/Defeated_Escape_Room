@@ -25,7 +25,7 @@ UserInterface ui = new UserInterface();
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
         }
-        else if(keys.WAIKA.name().equals(userInput))
+        else if(keys.TEAM.name().equals(userInput))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
                     + "The drawer slides open and reveals the contents inside./\n"

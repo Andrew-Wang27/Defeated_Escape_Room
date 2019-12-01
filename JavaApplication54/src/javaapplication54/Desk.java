@@ -57,10 +57,10 @@ public class Desk {
         else if(keys.LAMP.name().equalsIgnoreCase(u))
         {
             ui.printGameOutput("\nYou turn the lamp on and see a bookshelf across the room\n"
-                    + "with only 5 books littering the shelves and a large painting above\n"
+                    + "with only 4 books littering the shelves and a large painting above\n"
                     + "the couch on the other side of the room. The painting has a small\n"
                     + "quote on it. On the desk you see a keypad next to the locked drawer.\n"
-                    + "It looks like it will allow a 5 letter/number password.\n");
+                    + "It looks like it will allow a 4 letter/number password.\n");
             phone.printStatement(); 
         }
         /*else if u.equalsIgnoreCase(room1.keyWords[location of TIMER]

@@ -23,7 +23,7 @@ public class Furnace {
     {
         ui.printGameOutput("\n\nYou walked towards the furnace. It is a very "
                 + "old and rusty furnace but you are able to read the model number."
-                + " The model number is: 46 AJD 0605"); 
+                + " The model is: Massachusetts Furnace CO: 18"); 
         ui.printGameOutput("\nWhere do you want to go?");
         
         userInput = ui.getGameInput(keys.TOOLBOX.name(), keys.CABINET.name()); 

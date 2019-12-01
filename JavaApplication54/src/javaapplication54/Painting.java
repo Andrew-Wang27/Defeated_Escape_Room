@@ -16,9 +16,9 @@ public class Painting {
     UserInterface ui = new UserInterface(); 
     void printStatement() throws InterruptedException
     {
-        ui.printGameOutput("The painting is of Toto and Dorothy from the Wizard of Oz\n"
-                + "walking down the yellow brick road. There is a quote written\n"
-                + "at the bottom: We Aren't In Kansas Anymore\nWhat do you want to do now?"); 
+        ui.printGameOutput("The painting is the famous portrait of dogs\n"
+                + "playing poker. There is a small title written\n"
+                + "at the bottom: Dog Team Poker\nWhat do you want to do now?"); 
         
         userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name()); 
         CodeBookshelf(userInput); 
