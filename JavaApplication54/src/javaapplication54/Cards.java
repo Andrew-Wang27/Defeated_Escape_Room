@@ -22,7 +22,7 @@ public class Cards {
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("\n\nYou walked over by the cards. The cards are"
-                + "randomly mixed on the floor. Each card has a number.\n"
+                + " randomly mixed on the floor. Each card has a number.\n"
                 + "The numbers include:\n"
                 + "2 4 8 2 5"); 
         ui.printGameOutput("\nWhere do you want to go?\n");
