@@ -42,6 +42,7 @@ public class Room3 {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.POOLTABLE.name().equalsIgnoreCase(u))
         {
