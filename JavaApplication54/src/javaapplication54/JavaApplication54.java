@@ -33,12 +33,7 @@ public class JavaApplication54 {
         ui.printGameOutput("Welcome to Escape Room!\n The rules are as follows:\n"
                 + "Enter key words to move ahead in the game\n"
                 + "***Correct input will only be ONE word long***\n"
-                + "Helpful key words: MOVE, WAIT, LEFT, RIGHT, THROW,\n"
-                + " SMELL, FORWARD, EXPLORE, CODE, PAINTING, TIMER, BOOKSHELF,\n"
-                + " WAIKA, PHONE, LAMP, TABLE, TOOLBOX, YES, NO, UNDER, CANDLE,\n"
-                + " CABINET, FURNACE, TRYAGAIN, POOLTABLE, DARTBOARD, BAR, NECKLACE,\n"
-                + " NOTE, CARDS, PLAY, BALL, ROYALFLUSH, LITTLETABLE, QUIT, BACKWARD,\n"
-                + " TEAM, MIT, BLACKJACK...\n"
+                + "Helpful key words will be shown in the dialogue boxes.\n"
                 + "The first room will now begin\nGOOD LUCK\n\n\n");
         
         
