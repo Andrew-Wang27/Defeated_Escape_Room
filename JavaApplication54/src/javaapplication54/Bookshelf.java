@@ -23,7 +23,7 @@ public class Bookshelf {
     {
         ui.printGameOutput("You are standing in front of a bookshelf with 4 books on the shelves.\n"
                 + "You open each book and flip through the pages. In each book,\n"
-                + "there is a note with a letter on it. The letters are: M E A T\n\n"
+                + "there is a note with a letter on it. The letters are: A T E M\n\n"
                 + "What do you want to do now?");
         
         userInput = ui.getGameInput(keys.CODE.name(), keys.PAINTING.name()); 
