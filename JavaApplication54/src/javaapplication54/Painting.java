@@ -17,9 +17,9 @@ public class Painting {
     void printStatement() throws InterruptedException
     {
         ui.printGameOutput("The painting is the famous portrait of dogs\n"
-                + "playing a game of cards. The first dog is holding the number 2"
-                + "The second is holding the number 3, the third dog is holding the"
-                + "number 1, and the fourth dog is holding the 4.\n"
+                + "playing a game of cards. The first dog is holding the number 2.\n"
+                + "The second is holding the number 3.\nThe third dog is holding the"
+                + "number 1.\nThe fourth dog is holding the 4.\n"
                 + "At the bottom: arrange the numbers.\nWhat do you want to do now?"); 
         
         userInput = ui.getGameInput(keys.CODE.name(), keys.BOOKSHELF.name()); 
