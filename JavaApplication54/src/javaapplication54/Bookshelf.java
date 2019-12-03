@@ -34,7 +34,8 @@ public class Bookshelf {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.CODE.name().equalsIgnoreCase(u))
         {

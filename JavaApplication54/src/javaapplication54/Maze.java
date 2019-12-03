@@ -36,6 +36,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart(); 
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -64,7 +65,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -94,7 +96,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -127,6 +130,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -167,6 +171,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -206,7 +211,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
@@ -231,6 +237,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -270,7 +277,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -303,6 +311,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.RIGHT.name().equalsIgnoreCase(u))
         {
@@ -335,6 +344,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -366,7 +376,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.BACKWARD.name().equalsIgnoreCase(u))
         {
@@ -391,6 +402,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -431,6 +443,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -454,7 +467,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
@@ -495,6 +509,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
@@ -519,6 +534,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -551,6 +567,7 @@ public class Maze {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.FORWARD.name().equalsIgnoreCase(u))
         {
@@ -574,7 +591,8 @@ public class Maze {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.LEFT.name().equalsIgnoreCase(u))
         {
@@ -611,10 +629,12 @@ public class Maze {
         if(userInput == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(userInput.contains(keys.MIT.name()) && userInput.contains(keys.BLACKJACK.name()) && userInput.contains(keys.TEAM.name()))
         {
-            ui.printGameOutput("\nYou have escaped! The Defeated thanks you for playing!"); 
+            ui.printGameOutput("\nYou have escaped!"); 
+            ui.restart(); 
         }
         else
         {

@@ -37,7 +37,8 @@ public class getKnife {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         //if forward
          if(keys.FORWARD.name().equalsIgnoreCase(u))

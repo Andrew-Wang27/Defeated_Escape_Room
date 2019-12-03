@@ -34,7 +34,8 @@ public class Pooltable {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
@@ -118,6 +119,7 @@ public class Pooltable {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
@@ -161,7 +163,8 @@ public class Pooltable {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.PLAY.name().equalsIgnoreCase(u))
         {
@@ -179,7 +182,7 @@ public class Pooltable {
         else
         {
             ui.printGameOutput("\nSorry, we do not recognize that word\n"); 
-            printStatement();  
+            printStatement2();  
         }
     }
 }

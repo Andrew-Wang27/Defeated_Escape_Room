@@ -34,7 +34,7 @@ public class UserInterface extends JFrame{
     
     static final String GAME_TEXT = "The Defeated Presents: Escape Room";
     static final String DEFAULT_PROMPT = "> ";
-    
+    static Room1 room1 = new Room1(); 
      /**
      * Constructor - set up JFRAME for Game Output
      */
@@ -129,6 +129,18 @@ public class UserInterface extends JFrame{
         String input = JOptionPane.showInputDialog(frame, "Enter " + x + " or " + y + " or " + z);
         printGameOutput("\nYou entered: " + input + "\n"); 
         return input; 
+    }
+    static void restart()throws InterruptedException { 
+        int i = JOptionPane.showConfirmDialog(frame, "Restart the game?", null, JOptionPane.YES_NO_OPTION); 
+        if(i == JOptionPane.YES_OPTION)
+        {
+            gameText.setText(null);
+            room1.OpeningScenario();
+        }
+        else if(i == JOptionPane.NO_OPTION)
+        {
+            printGameOutput("\nThe Defeated thanks you for playing."); 
+        }
     }
     /*
     static String getGameInput2() {

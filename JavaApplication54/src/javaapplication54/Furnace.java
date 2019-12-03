@@ -41,6 +41,7 @@ public class Furnace {
         if(userInput == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart(); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(userInput))
         {

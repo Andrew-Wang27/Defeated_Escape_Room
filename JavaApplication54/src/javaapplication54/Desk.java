@@ -44,6 +44,7 @@ public class Desk {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.restart();
         }
         else if(keys.PHONE.name().equalsIgnoreCase(u))
         {
