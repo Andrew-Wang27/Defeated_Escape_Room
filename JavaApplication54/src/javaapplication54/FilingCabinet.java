@@ -36,7 +36,8 @@ public class FilingCabinet {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");
+            ui.restart();
         }
         else if(keys.YES.name().equalsIgnoreCase(u))
         {
@@ -121,6 +122,7 @@ public class FilingCabinet {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart(); 
         }
         else if(keys.TOOLBOX.name().equalsIgnoreCase(u))
         {
