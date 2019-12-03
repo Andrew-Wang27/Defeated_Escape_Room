@@ -114,7 +114,7 @@ public class FilingCabinet {
      * if user enters TOOLBOX - object created of that class and print statement called
      * if user enters FURNACE - object created of that class and print statement called
      * if user enters CABINET - user prompted to enter another file number (user input sent to File method)
-     * @param u - userinput from File method
+     * @param u - user input from File method
      */
     void ToolBoxOrFurnaceOrCabinet(String u) throws InterruptedException
     {
