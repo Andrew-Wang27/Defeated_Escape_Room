@@ -45,7 +45,6 @@ public class JavaApplication54 {
         //after user complete room1 and room2, user moves to room3
         //room3.OpeningScenario();
         
-        
     }
     
  }
