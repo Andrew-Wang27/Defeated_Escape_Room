@@ -46,7 +46,7 @@ public class UserInterface extends JFrame{
 
         gameText = new JTextArea();
         gameText.setBackground(Color.black);
-        gameText.setForeground(Color.white);
+        gameText.setForeground(Color.green);
         gameText.setLineWrap(true);
         gameText.setWrapStyleWord(true);
 
