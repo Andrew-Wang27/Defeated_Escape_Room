@@ -28,7 +28,7 @@ UserInterface ui = new UserInterface();
         else if(keys.TEAM.name().equals(userInput))
         {
             ui.printGameOutput("Congrats! You got the code right!\n"
-                    + "The drawer slides open and reveals the contents inside./\n"
+                    + "The drawer slides open and reveals the contents inside.\n"
                     + "A medical kit and key are inside."); 
             
             rug.printStatement(); 
