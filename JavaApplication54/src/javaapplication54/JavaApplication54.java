@@ -33,7 +33,7 @@ public class JavaApplication54 {
         ui.printGameOutput("Welcome to Escape Room!\n The rules are as follows:\n"
                 + "Enter key words to move ahead in the game\n"
                 + "***Correct input will only be ONE word long***\n"
-                + "Helpful key words will be shown in the dialogue boxes.\n"
+                + "Helpful key words will be shown in the dialog box.\n"
                 + "The first room will now begin\nGOOD LUCK\n\n\n");
         
         
