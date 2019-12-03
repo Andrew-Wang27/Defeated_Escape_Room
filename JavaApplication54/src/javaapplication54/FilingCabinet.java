@@ -79,7 +79,7 @@ public class FilingCabinet {
         }
         else if(u.equals("18"))
         {
-            ui.printGameOutput("\nThe file says: MIT, 77 Massachusetts Ave, Cambridge, MA 02139\n");
+            ui.printGameOutput("\nThe file says: 21 Massachusetts Investigates Technology, MIT 021021\n");
         }
         else if(u.equals("4") || u.equals("20") || u.equals("11")|| u.equals("8") || u.equals("15") || u.equals("10")|| u.equals("17"))
         {
