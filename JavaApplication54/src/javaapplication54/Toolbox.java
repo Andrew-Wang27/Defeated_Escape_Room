@@ -29,7 +29,7 @@ public class Toolbox {
     }
     
     /**
-     * this method checks the userinput. if the input is 1002, the toolbox is unlocked and the key is acquired.
+     * this method checks the user input. if the input is 1002, the toolbox is unlocked and the key is acquired.
      * if the input is wrong then the user gets a choice of TRYAGAIN or MOVE. This input will be sent to the tryAgainOrMove method.
      * 
      * @param u 
