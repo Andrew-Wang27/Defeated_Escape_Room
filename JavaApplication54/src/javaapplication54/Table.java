@@ -37,6 +37,7 @@ public class Table {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.UNDER.name().equalsIgnoreCase(u))
         {
@@ -70,7 +71,8 @@ public class Table {
     {
         if(u == null)
         {
-            ui.printGameOutput("\nYou have given up by clicking QUIT!\n");  
+            ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.CABINET.name().equalsIgnoreCase(u))
         {
