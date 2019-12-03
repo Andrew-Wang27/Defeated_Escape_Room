@@ -44,6 +44,7 @@ public class Cards {
         if(u == null)
         {
             ui.printGameOutput("\nYou have given up by clicking QUIT!\n"); 
+            ui.restart();
         }
         else if(keys.BAR.name().equalsIgnoreCase(u))
         {
