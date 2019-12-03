@@ -49,7 +49,9 @@ public class Toolbox {
         }
         else 
         {
-            ui.printGameOutput("\nWrong code! What would you like to do now?\n"); 
+            ui.printGameOutput("\nWrong code!\n"
+                    + "HINT: The number at the furnace points to a number at the cabinet.\n"
+                    + "What would you like to do now?\n"); 
             
             tryAgainOrMove();
             
