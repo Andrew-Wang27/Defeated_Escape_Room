@@ -638,8 +638,8 @@ public class Maze {
         }
         else
         {
-            ui.printGameOutput("\nWrong code! Hint: this password has been growing\n"
-                    + "each time you escpaed a room!\n"); 
+            ui.printGameOutput("\nWrong code!\n Hint 1: Final password to the maze is a combination of the first 3 passwords.\n"
+                    + "Hint 2: Who was the most infamous team at MIT in the 90s?\n"); 
             code(); 
         }
         
